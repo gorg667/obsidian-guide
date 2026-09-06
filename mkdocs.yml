@@ -103,3 +103,4 @@ nav:
   - Home: index.md
   - "Part I — Foundations":
     - 01-philosophy.md
+    - 02-setup-and-interface.md
