@@ -101,3 +101,5 @@ extra_css:
 
 nav:
   - Home: index.md
+  - "Part I — Foundations":
+    - 01-philosophy.md
