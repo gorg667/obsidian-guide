@@ -28,11 +28,17 @@ Workflow constraints from the user:
 
 ## Decisions taken (do not re-litigate; just continue)
 
-- Site generator: **MkDocs Material** (`mkdocs.yml` at repo root). Deployed via GitHub
-  Actions (`.github/workflows/deploy.yml`) on push to `main` using the official
-  `actions/deploy-pages` flow. **User must set repo Settings → Pages → Source = "GitHub
-  Actions"** (mention this in the final message; cannot be done from the sandbox... actually
-  can be attempted via `gh api` if token permits — try once at the end).
+- Site generator: **MkDocs Material** (`mkdocs.yml` at repo root).
+- Deployment: the GitHub App token CANNOT push `.github/workflows/*` (no `workflows`
+  permission — push was rejected). So we deploy with **`mkdocs gh-deploy --force`**, which
+  builds and pushes the static site to the `gh-pages` branch. GitHub Pages must be set to
+  serve from branch `gh-pages` / root (try `gh api -X POST repos/gorg667/obsidian-guide/pages
+  -f source[branch]=gh-pages -f source[path]=/` at the end; otherwise tell the user to set
+  Settings → Pages → Deploy from a branch → gh-pages). The optional Actions workflow is kept
+  at `deploy-templates/github-pages-workflow.yml` for the user to move into
+  `.github/workflows/` manually if they prefer CI builds.
+- Run `mkdocs gh-deploy --force -q` after every few chapters (it's fast) so the live site
+  is never far behind `main`.
 - Structure: one Markdown file per chapter in `docs/` named `NN-slug.md`, each starting
   with exactly one `# H1`. `docs/index.md` is the landing page. `scripts/build_guide.py`
   concatenates chapters (in nav order) into a root `GUIDE.md` (single-file edition).
@@ -209,7 +215,7 @@ Part VI — Reference
 
 ```bash
 cd /home/user/webapp && python3 scripts/build_guide.py && mkdocs build --strict -q && \
-git add -A && git commit -m "docs: <chapter>" && git push origin main
+git add -A && git commit -m "docs: <chapter>" && git push origin main && mkdocs gh-deploy --force -q
 ```
 
 ## Status log

@@ -6,7 +6,7 @@ The most detailed, comprehensive guide to mastering [Obsidian](https://obsidian.
 - **Single-file edition:** [`GUIDE.md`](GUIDE.md) (auto-generated from `docs/`)
 - **Chapters:** [`docs/`](docs/)
 
-Built with MkDocs Material and deployed to GitHub Pages via GitHub Actions on every push to `main`.
+Built with MkDocs Material and deployed to GitHub Pages (`gh-pages` branch) via `mkdocs gh-deploy`. An optional GitHub Actions workflow is provided in `deploy-templates/`.
 
 ## Build locally
 
