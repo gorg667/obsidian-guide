@@ -165,7 +165,7 @@ Part V — Power user
       plugin security, Keychain, URI allow list
 - [x] 27-mobile.md — iOS/Android setup, mobile-friendly workflows, Share Sheet (1.13),
       Shortcuts/Tasker automation, mobile toolbar, quick capture
-- [ ] 28-customization.md — themes (best), Style Settings, CSS snippets (30+ snippets),
+- [x] 28-customization.md — themes (best), Style Settings, CSS snippets (30+ snippets),
       cssclasses, callout styling (new --callout-color), fonts, icons, workspace tuning
 - [ ] 29-automation-and-integrations.md — Obsidian URI (all actions), Advanced URI,
       Obsidian CLI (full command cheat sheet + scripts), Shell commands, Local REST API,
