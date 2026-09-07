@@ -150,7 +150,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       records, symptoms, sleep, quantified-self dashboards
 - [x] 21-finance.md — budgets, expenses, subscriptions, net worth, investments log,
       taxes, purchases/warranties; Bases & Dataview money dashboards
-- [ ] 22-home-life-admin.md — household, maintenance, documents, inventory, travel
+- [x] 22-home-life-admin.md — household, maintenance, documents, inventory, travel
       planning, vehicles, pets, kids, gifts, contacts, digital legacy
 - [ ] 23-relationships-and-people.md — people notes, interaction log, birthdays,
       gratitude, family history, "personal CRM" the right way
