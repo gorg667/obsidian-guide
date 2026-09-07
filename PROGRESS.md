@@ -148,7 +148,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       docs, career journal, brag document, job search
 - [x] 20-health-fitness-food.md — workout logs, nutrition, recipes/meal planning, medical
       records, symptoms, sleep, quantified-self dashboards
-- [ ] 21-finance.md — budgets, expenses, subscriptions, net worth, investments log,
+- [x] 21-finance.md — budgets, expenses, subscriptions, net worth, investments log,
       taxes, purchases/warranties; Bases & Dataview money dashboards
 - [ ] 22-home-life-admin.md — household, maintenance, documents, inventory, travel
       planning, vehicles, pets, kids, gifts, contacts, digital legacy
