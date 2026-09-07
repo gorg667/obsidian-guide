@@ -142,7 +142,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       OKRs, someday/maybe, waiting-for, weekly review, dashboards, habit loops
 - [x] 17-knowledge-learning.md — reading system (books/articles/papers), literature
       notes → permanent notes, spaced repetition, courses, language learning, skills
-- [ ] 18-academic-research.md — Zotero pipeline, citations, PDF annotation, literature
+- [x] 18-academic-research.md — Zotero pipeline, citations, PDF annotation, literature
       reviews, thesis writing, Pandoc export, LaTeX
 - [ ] 19-work-and-career.md — meeting notes, people/CRM, 1:1s, decision logs, project
       docs, career journal, brag document, job search
