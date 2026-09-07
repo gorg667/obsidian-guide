@@ -152,7 +152,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       taxes, purchases/warranties; Bases & Dataview money dashboards
 - [x] 22-home-life-admin.md — household, maintenance, documents, inventory, travel
       planning, vehicles, pets, kids, gifts, contacts, digital legacy
-- [ ] 23-relationships-and-people.md — people notes, interaction log, birthdays,
+- [x] 23-relationships-and-people.md — people notes, interaction log, birthdays,
       gratitude, family history, "personal CRM" the right way
 - [ ] 24-creativity-writing-media.md — long-form writing (Longform), worldbuilding,
       idea capture, music/movies/games logs, photography, hobbies
