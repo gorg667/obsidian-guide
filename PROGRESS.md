@@ -136,7 +136,7 @@ Part III — Core plugins mastery
 
 Part IV — Obsidian for everything in life (one section per domain, each with: purpose,
 note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, pitfalls)
-- [ ] 15-daily-notes-and-journaling.md — daily/weekly/monthly/quarterly/yearly notes,
+- [x] 15-daily-notes-and-journaling.md — daily/weekly/monthly/quarterly/yearly notes,
       journaling frameworks, mood/energy tracking, interstitial journaling, reviews
 - [ ] 16-tasks-projects-goals.md — full GTD-style system: inbox, projects, areas, goals,
       OKRs, someday/maybe, waiting-for, weekly review, dashboards, habit loops
