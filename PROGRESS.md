@@ -171,7 +171,7 @@ Part V — Power user
       Obsidian CLI (full command cheat sheet + scripts), Shell commands, Local REST API,
       Hookmark, Raycast/Alfred, Apple Shortcuts, Tasker, Zapier/n8n, email-to-vault,
       calendar sync, Readwise, Web Clipper (templates, Interpreter)
-- [ ] 30-ai.md — Copilot, Smart Connections, Text Generator, local LLMs (Ollama), MCP
+- [x] 30-ai.md — Copilot, Smart Connections, Text Generator, local LLMs (Ollama), MCP
       servers for Obsidian, Claude/ChatGPT desktop + CLI + REST, Web Clipper Interpreter,
       prompts library, privacy considerations, what AI is actually good for in PKM
 - [ ] 31-publishing-and-sharing.md — Publish, Quartz, Digital Garden, MkDocs, Hugo,
