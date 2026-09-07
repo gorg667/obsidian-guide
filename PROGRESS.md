@@ -230,7 +230,18 @@ git add -A && git commit -m "docs: <chapter>" && git push origin main && mkdocs 
 - 2026-09-06: Repo scaffolded (mkdocs.yml, workflow, build script, PROGRESS.md). Research
   done on Obsidian 1.9–1.13 changelogs, Bases syntax/functions, CLI reference.
 
-## Next steps
+## Status: COMPLETE (2026-09-07)
+
+All 38 chapters written, strict mkdocs build passes with zero warnings, GUIDE.md generated
+(~84k words), site deployed via `mkdocs gh-deploy` and GitHub Pages auto-enabled from the
+`gh-pages` branch — live at https://gorg667.github.io/obsidian-guide/ (HTTP 200 verified).
+Favicon added. README finalized.
+
+Possible future work (optional): proofreading pass for consistency of plugin names; adding
+diagrams/screenshots; a per-chapter "further reading"; keeping version facts current as
+Obsidian 1.14 (Bases kanban) ships.
+
+## Next steps (historical — done)
 
 1. Write docs/index.md (landing page).
 2. Write chapters in order 01 → 38. Update nav + this file after each.
