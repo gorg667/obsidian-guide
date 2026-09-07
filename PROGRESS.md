@@ -176,7 +176,7 @@ Part V — Power user
       prompts library, privacy considerations, what AI is actually good for in PKM
 - [x] 31-publishing-and-sharing.md — Publish, Quartz, Digital Garden, MkDocs, Hugo,
       export to PDF/Word (Pandoc), Slides, sharing single notes
-- [ ] 32-performance-maintenance-troubleshooting.md — large vaults, plugin audit,
+- [x] 32-performance-maintenance-troubleshooting.md — large vaults, plugin audit,
       indexing, attachments, broken links, orphan cleanup, Linter, File recovery,
       common error patterns, debugging (CLI dev tools), safe mode
 - [ ] 33-migration.md — from Notion, Evernote, Roam, Logseq, Apple Notes, OneNote,
