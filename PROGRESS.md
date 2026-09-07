@@ -107,7 +107,7 @@ Part II — Systems & methodology
       hierarchy, attachments policy, archive policy, multi-vault vs single vault
 
 Part III — Core plugins mastery
-- [ ] 09-core-plugins.md — every core plugin: what/when/settings/tricks (Daily notes,
+- [x] 09-core-plugins.md — every core plugin: what/when/settings/tricks (Daily notes,
       Templates, Backlinks, Bookmarks, Canvas, Command palette, File recovery, Note
       composer, Outline, Page preview, Properties view, Publish, Quick switcher, Random
       note, Slash commands, Slides, Sync, Tags view, Templates, Unique note creator, Web

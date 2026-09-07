@@ -111,3 +111,5 @@ nav:
   - "Part II — Systems & Methodology":
     - 07-pkm-methodologies.md
     - 08-vault-architecture.md
+  - "Part III — Core Tools Mastery":
+    - 09-core-plugins.md
