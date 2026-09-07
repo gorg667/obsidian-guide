@@ -187,7 +187,7 @@ Part V — Power user
 Part VI — Reference
 - [x] 35-mastery-roadmap.md — 30/60/90-day & 1-year roadmap, weekly exercises,
       self-assessment checklist, maturity model
-- [ ] 36-templates-library.md — all templates in one place, copy-paste ready
+- [x] 36-templates-library.md — all templates in one place, copy-paste ready
 - [ ] 37-cheatsheets.md — hotkeys, Markdown, search operators, Dataview, Bases
       functions, Templater, Tasks, CLI, URI
 - [ ] 38-resources-and-glossary.md — glossary, curated resources, communities
