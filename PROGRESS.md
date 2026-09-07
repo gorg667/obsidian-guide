@@ -167,7 +167,7 @@ Part V — Power user
       Shortcuts/Tasker automation, mobile toolbar, quick capture
 - [x] 28-customization.md — themes (best), Style Settings, CSS snippets (30+ snippets),
       cssclasses, callout styling (new --callout-color), fonts, icons, workspace tuning
-- [ ] 29-automation-and-integrations.md — Obsidian URI (all actions), Advanced URI,
+- [x] 29-automation-and-integrations.md — Obsidian URI (all actions), Advanced URI,
       Obsidian CLI (full command cheat sheet + scripts), Shell commands, Local REST API,
       Hookmark, Raycast/Alfred, Apple Shortcuts, Tasker, Zapier/n8n, email-to-vault,
       calendar sync, Readwise, Web Clipper (templates, Interpreter)
