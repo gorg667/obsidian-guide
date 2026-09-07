@@ -179,7 +179,7 @@ Part V — Power user
 - [x] 32-performance-maintenance-troubleshooting.md — large vaults, plugin audit,
       indexing, attachments, broken links, orphan cleanup, Linter, File recovery,
       common error patterns, debugging (CLI dev tools), safe mode
-- [ ] 33-migration.md — from Notion, Evernote, Roam, Logseq, Apple Notes, OneNote,
+- [x] 33-migration.md — from Notion, Evernote, Roam, Logseq, Apple Notes, OneNote,
       Google Keep, Bear, Craft, Airtable; importer; cleanup afterwards; exporting out
 - [ ] 34-plugin-development-primer.md — enough to write your own plugin: scaffold,
       API basics, Bases view API, CLI dev commands, publishing to the directory
