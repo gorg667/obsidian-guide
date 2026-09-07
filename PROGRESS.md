@@ -120,7 +120,7 @@ Part III — Core plugins mastery
 - [x] 12-dataview.md — DQL (TABLE/LIST/TASK/CALENDAR, FROM/WHERE/SORT/GROUP BY/FLATTEN),
       inline fields, functions, DataviewJS, dv.* API, performance, 50+ queries for life
       domains, common errors
-- [ ] 13-tasks-and-time.md — Tasks plugin (syntax, emoji signifiers, queries, recurrence,
+- [x] 13-tasks-and-time.md — Tasks plugin (syntax, emoji signifiers, queries, recurrence,
       dependencies, custom statuses), Periodic Notes, Calendar, Day Planner, Kanban,
       Full Calendar, Reminder; complete task management system design
 - [ ] 14-essential-community-plugins.md — curated tiers: must-have, situational, avoid;
