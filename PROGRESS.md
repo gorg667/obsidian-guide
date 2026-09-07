@@ -76,20 +76,20 @@ Workflow constraints from the user:
 ## Chapter plan (nav order). Status legend: [ ] todo, [~] in progress, [x] done+pushed
 
 Part I — Foundations
-- [ ] 00 index.md — landing page: what this is, how to read it, TOC, who it's for
-- [ ] 01-philosophy.md — Why Obsidian; file-over-app; local-first; plain text; the mental
+- [x] 00 index.md — landing page: what this is, how to read it, TOC, who it's for
+- [x] 01-philosophy.md — Why Obsidian; file-over-app; local-first; plain text; the mental
       model (vault = folder, note = file, links = graph, properties = metadata); what
       Obsidian is bad at; the 4 layers of mastery
-- [ ] 02-setup-and-interface.md — installation on all platforms, vault design decisions,
+- [x] 02-setup-and-interface.md — installation on all platforms, vault design decisions,
       settings audit (every setting that matters + recommended values), interface anatomy,
       workspace layouts, tabs/splits/stacked tabs, hotkeys philosophy, command palette,
       quick switcher, Settings search (1.13), Restricted mode, multiple vaults strategy
-- [ ] 03-markdown-and-editing.md — Obsidian-flavored Markdown exhaustive: headings, lists,
+- [x] 03-markdown-and-editing.md — Obsidian-flavored Markdown exhaustive: headings, lists,
       tasks, callouts (all types + custom + foldable), tables, footnotes, math, Mermaid,
       code blocks, comments, highlights, HTML, embeds of everything, block IDs, editing
       tricks, multi-cursor, Vim mode, Live Preview vs Source vs Reading, formatting menu,
       image handling (1.12/1.13)
-- [ ] 04-links-and-graph.md — wikilinks vs markdown links, aliases, heading/block links,
+- [x] 04-links-and-graph.md — wikilinks vs markdown links, aliases, heading/block links,
       embeds, backlinks, outgoing links, unlinked mentions, link maintenance, Graph view
       (filters, groups, colors, local graph), Canvas deep dive + JSON Canvas
 - [ ] 05-properties-tags-and-metadata.md — properties (all types), YAML gotchas, tags vs
@@ -219,6 +219,13 @@ git add -A && git commit -m "docs: <chapter>" && git push origin main && mkdocs 
 ```
 
 ## Status log
+
+- IMPORTANT: enabling GitHub Pages via API returned 403 (token lacks permission). The
+  `gh-pages` branch exists and is populated by `mkdocs gh-deploy --force`. The USER must
+  do once: repo Settings → Pages → Source "Deploy from a branch" → branch `gh-pages`,
+  folder `/ (root)`. Tell them in the final message.
+- Sandbox/account switch happened after ch03; ch04 was lost and rewritten. Lesson: commit
+  IMMEDIATELY after each Write, never batch.
 
 - 2026-09-06: Repo scaffolded (mkdocs.yml, workflow, build script, PROGRESS.md). Research
   done on Obsidian 1.9–1.13 changelogs, Bases syntax/functions, CLI reference.
