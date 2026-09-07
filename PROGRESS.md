@@ -174,7 +174,7 @@ Part V — Power user
 - [x] 30-ai.md — Copilot, Smart Connections, Text Generator, local LLMs (Ollama), MCP
       servers for Obsidian, Claude/ChatGPT desktop + CLI + REST, Web Clipper Interpreter,
       prompts library, privacy considerations, what AI is actually good for in PKM
-- [ ] 31-publishing-and-sharing.md — Publish, Quartz, Digital Garden, MkDocs, Hugo,
+- [x] 31-publishing-and-sharing.md — Publish, Quartz, Digital Garden, MkDocs, Hugo,
       export to PDF/Word (Pandoc), Slides, sharing single notes
 - [ ] 32-performance-maintenance-troubleshooting.md — large vaults, plugin audit,
       indexing, attachments, broken links, orphan cleanup, Linter, File recovery,
