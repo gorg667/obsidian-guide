@@ -146,7 +146,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       reviews, thesis writing, Pandoc export, LaTeX
 - [x] 19-work-and-career.md — meeting notes, people/CRM, 1:1s, decision logs, project
       docs, career journal, brag document, job search
-- [ ] 20-health-fitness-food.md — workout logs, nutrition, recipes/meal planning, medical
+- [x] 20-health-fitness-food.md — workout logs, nutrition, recipes/meal planning, medical
       records, symptoms, sleep, quantified-self dashboards
 - [ ] 21-finance.md — budgets, expenses, subscriptions, net worth, investments log,
       taxes, purchases/warranties; Bases & Dataview money dashboards
