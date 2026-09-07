@@ -112,7 +112,7 @@ Part III — Core plugins mastery
       composer, Outline, Page preview, Properties view, Publish, Quick switcher, Random
       note, Slash commands, Slides, Sync, Tags view, Templates, Unique note creator, Web
       viewer, Word count, Workspaces, Footnotes view, Importer, Bases, Format converter)
-- [ ] 10-bases.md — Bases deep dive: .base format, views (table/cards/list/map), filters,
+- [x] 10-bases.md — Bases deep dive: .base format, views (table/cards/list/map), filters,
       formulas, functions reference (condensed), summaries, groupBy, `this`, embedded
       bases, 25+ ready-made bases for life domains, Bases vs Dataview, migration
 - [ ] 11-templates-and-templater.md — core Templates → Templater: syntax, tp.* modules,
