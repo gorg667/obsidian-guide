@@ -99,7 +99,7 @@ Part I — Foundations
       searches, search in Bases/Dataview comparison, Omnisearch
 
 Part II — Systems & methodology
-- [ ] 07-pkm-methodologies.md — Zettelkasten, Evergreen notes, LYT/MOCs, PARA, CODE/Second
+- [x] 07-pkm-methodologies.md — Zettelkasten, Evergreen notes, LYT/MOCs, PARA, CODE/Second
       Brain, Johnny.Decimal, GTD, ACCESS, Progressive summarization; comparison matrix;
       hybrid recommended system; anti-patterns
 - [ ] 08-vault-architecture.md — the recommended reference vault: folder tree, naming
