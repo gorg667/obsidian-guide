@@ -160,7 +160,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       journal, mental models, commonplace book, quotes, annual review
 
 Part V — Power user
-- [ ] 26-sync-backup-security.md — Sync vs iCloud vs Syncthing vs Git vs Remotely Save vs
+- [x] 26-sync-backup-security.md — Sync vs iCloud vs Syncthing vs Git vs Remotely Save vs
       LiveSync (matrix), mobile specifics, conflict handling, backup 3-2-1, encryption,
       plugin security, Keychain, URI allow list
 - [ ] 27-mobile.md — iOS/Android setup, mobile-friendly workflows, Share Sheet (1.13),
