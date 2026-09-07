@@ -102,7 +102,7 @@ Part II — Systems & methodology
 - [x] 07-pkm-methodologies.md — Zettelkasten, Evergreen notes, LYT/MOCs, PARA, CODE/Second
       Brain, Johnny.Decimal, GTD, ACCESS, Progressive summarization; comparison matrix;
       hybrid recommended system; anti-patterns
-- [ ] 08-vault-architecture.md — the recommended reference vault: folder tree, naming
+- [x] 08-vault-architecture.md — the recommended reference vault: folder tree, naming
       conventions, note types & their schemas, template set, inbox → process flow, MOC
       hierarchy, attachments policy, archive policy, multi-vault vs single vault
 
