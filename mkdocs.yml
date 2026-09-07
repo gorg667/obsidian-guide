@@ -140,3 +140,5 @@ nav:
     - 32-performance-maintenance-troubleshooting.md
     - 33-migration.md
     - 34-plugin-development-primer.md
+  - "Part VI — Reference":
+    - 35-mastery-roadmap.md
