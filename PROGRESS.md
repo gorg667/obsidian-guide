@@ -154,7 +154,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       planning, vehicles, pets, kids, gifts, contacts, digital legacy
 - [x] 23-relationships-and-people.md — people notes, interaction log, birthdays,
       gratitude, family history, "personal CRM" the right way
-- [ ] 24-creativity-writing-media.md — long-form writing (Longform), worldbuilding,
+- [x] 24-creativity-writing-media.md — long-form writing (Longform), worldbuilding,
       idea capture, music/movies/games logs, photography, hobbies
 - [ ] 25-mind-and-self.md — values, principles, reflection, therapy notes, decision
       journal, mental models, commonplace book, quotes, annual review
