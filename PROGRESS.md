@@ -123,7 +123,7 @@ Part III — Core plugins mastery
 - [x] 13-tasks-and-time.md — Tasks plugin (syntax, emoji signifiers, queries, recurrence,
       dependencies, custom statuses), Periodic Notes, Calendar, Day Planner, Kanban,
       Full Calendar, Reminder; complete task management system design
-- [ ] 14-essential-community-plugins.md — curated tiers: must-have, situational, avoid;
+- [x] 14-essential-community-plugins.md — curated tiers: must-have, situational, avoid;
       per plugin: purpose, config, gotchas (QuickAdd, Excalidraw, Omnisearch, Linter,
       Advanced Tables, Style Settings, Commander, Homepage, Various Complements, Editing
       Toolbar, Iconize, Recent Files, Auto Note Mover, Note Refactor, Tag Wrangler,
