@@ -144,7 +144,7 @@ note types & schema, templates, Bases/Dataview dashboards, workflows, plugins, p
       notes → permanent notes, spaced repetition, courses, language learning, skills
 - [x] 18-academic-research.md — Zotero pipeline, citations, PDF annotation, literature
       reviews, thesis writing, Pandoc export, LaTeX
-- [ ] 19-work-and-career.md — meeting notes, people/CRM, 1:1s, decision logs, project
+- [x] 19-work-and-career.md — meeting notes, people/CRM, 1:1s, decision logs, project
       docs, career journal, brag document, job search
 - [ ] 20-health-fitness-food.md — workout logs, nutrition, recipes/meal planning, medical
       records, symptoms, sleep, quantified-self dashboards
