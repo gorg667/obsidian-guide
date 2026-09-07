@@ -163,7 +163,7 @@ Part V — Power user
 - [x] 26-sync-backup-security.md — Sync vs iCloud vs Syncthing vs Git vs Remotely Save vs
       LiveSync (matrix), mobile specifics, conflict handling, backup 3-2-1, encryption,
       plugin security, Keychain, URI allow list
-- [ ] 27-mobile.md — iOS/Android setup, mobile-friendly workflows, Share Sheet (1.13),
+- [x] 27-mobile.md — iOS/Android setup, mobile-friendly workflows, Share Sheet (1.13),
       Shortcuts/Tasker automation, mobile toolbar, quick capture
 - [ ] 28-customization.md — themes (best), Style Settings, CSS snippets (30+ snippets),
       cssclasses, callout styling (new --callout-color), fonts, icons, workspace tuning
