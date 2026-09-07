@@ -1,0 +1,3012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The most detailed, comprehensive guide to mastering Obsidian and building a life operating system with it.">
+      
+      
+      
+        <link rel="canonical" href="https://gorg667.github.io/obsidian-guide/29-automation-and-integrations/">
+      
+      
+        <link rel="prev" href="../28-customization/">
+      
+      
+        <link rel="next" href="../30-ai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Automation and Integrations - The Complete Obsidian Mastery Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automation-and-integrations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-header__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Complete Obsidian Mastery Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automation and Integrations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-philosophy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I — Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../07-pkm-methodologies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II — Systems & Methodology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../09-core-plugins/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part III — Core Tools Mastery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../15-daily-notes-and-journaling/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part IV — Obsidian for Everything in Life
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../26-sync-backup-security/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part V — Power User
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../35-mastery-roadmap/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part VI — Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-nav__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Complete Obsidian Mastery Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I — Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I — Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy and Mental Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-setup-and-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup, Settings and Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-markdown-and-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown and Editing Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-links-and-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Links, Backlinks, Graph and Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-properties-tags-and-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Properties, Tags and Metadata Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II — Systems & Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II — Systems & Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-pkm-methodologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PKM Methodologies Compared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-vault-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Architecture — the Reference Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III — Core Tools Mastery
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III — Core Tools Mastery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-core-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Plugins — Every One, Mastered
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases — the Native Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-templates-and-templater/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates and Templater
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-dataview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataview — Queries and Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-tasks-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks, Time and Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-essential-community-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Essential Community Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV — Obsidian for Everything in Life
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV — Obsidian for Everything in Life
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-daily-notes-and-journaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Notes and Journaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-tasks-projects-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks, Projects and Goals — the Action System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-knowledge-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge and Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-academic-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-work-and-career/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work and Career
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fitness-food/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health, Fitness and Food
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-home-life-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home and Life Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-relationships-and-people/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relationships and People
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-creativity-writing-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creativity, Writing and Media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-mind-and-self/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mind and Self
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part V — Power User
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part V — Power User
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-sync-backup-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync, Backup and Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28-customization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customization — Themes, CSS and Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation and Integrations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation and Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-automation-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The automation surfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-obsidian-uri-scheme-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The obsidian:// URI scheme (core)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-uri-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced URI (plugin)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obsidian-cli-112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obsidian CLI (1.12+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obsidian CLI (1.12+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-commands-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell commands plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-rest-api-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local REST API plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launchers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apple-shortcuts-and-tasker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apple Shortcuts and Tasker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-clipper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Clipper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principles-for-automations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design principles for automations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI in Your Vault
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31-publishing-and-sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing and Sharing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32-performance-maintenance-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance, Maintenance and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration — Into and Out of Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../34-plugin-development-primer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development Primer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part VI — Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part VI — Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../35-mastery-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Mastery Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../36-templates-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37-cheatsheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../38-resources-and-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary and Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-automation-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The automation surfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-obsidian-uri-scheme-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The obsidian:// URI scheme (core)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-uri-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced URI (plugin)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obsidian-cli-112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obsidian CLI (1.12+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obsidian CLI (1.12+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-commands-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell commands plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-rest-api-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local REST API plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launchers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apple-shortcuts-and-tasker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apple Shortcuts and Tasker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-clipper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Clipper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principles-for-automations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design principles for automations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../26-sync-backup-security/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part V — Power User
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/gorg667/obsidian-guide/edit/main/docs/29-automation-and-integrations.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="automation-and-integrations">Automation and Integrations<a class="headerlink" href="#automation-and-integrations" title="Permanent link">&para;</a></h1>
+<p>Because a vault is a folder of text files, anything that can write a file can write to your vault — and because Obsidian exposes a URI scheme, a command-line interface (1.12), and (via plugins) a REST API and shell access, anything can also trigger Obsidian itself. This chapter is the complete automation toolkit: the <code>obsidian://</code> URI scheme and Advanced URI, the Obsidian CLI with a full command cheat sheet and working scripts, Shell commands, the Local REST API, launcher integrations (Raycast, Alfred, AutoHotkey), Apple Shortcuts and Tasker, the Web Clipper and its Interpreter, and common integration recipes (calendar → meeting notes, email → inbox, Readwise, Strava, Letterboxd).</p>
+<h2 id="the-automation-surfaces">The automation surfaces<a class="headerlink" href="#the-automation-surfaces" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Direction</th>
+<th>Needs Obsidian running?</th>
+<th>Platforms</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Write files to the vault folder</strong></td>
+<td>in</td>
+<td>No (indexed on next open/focus)</td>
+<td>All</td>
+<td>The most robust automation: scripts, Shortcuts, Tasker, cron, cloud functions writing Markdown</td>
+</tr>
+<tr>
+<td><strong><code>obsidian://</code> URIs</strong></td>
+<td>in</td>
+<td>Launches it</td>
+<td>All</td>
+<td>Open/create/append notes, search; from browsers, launchers, other apps</td>
+</tr>
+<tr>
+<td><strong>Advanced URI plugin</strong></td>
+<td>in</td>
+<td>Launches it</td>
+<td>All</td>
+<td>Everything the core URI cannot: append to headings, set properties, run commands, open by UID, daily notes</td>
+</tr>
+<tr>
+<td><strong>Obsidian CLI</strong> (1.12+)</td>
+<td>in/out</td>
+<td>Yes (launches if not)</td>
+<td>Desktop</td>
+<td>Scripting: read/create/append/search/tasks/properties/bases/plugins/sync/publish/dev</td>
+</tr>
+<tr>
+<td><strong>Shell commands plugin</strong></td>
+<td>out</td>
+<td>Yes</td>
+<td>Desktop</td>
+<td>Run scripts from inside Obsidian with note variables; output to notes</td>
+</tr>
+<tr>
+<td><strong>Local REST API plugin</strong></td>
+<td>in/out</td>
+<td>Yes</td>
+<td>Desktop (mobile experimental)</td>
+<td>HTTP access for external tools, MCP servers, launchers</td>
+</tr>
+<tr>
+<td><strong>Templater / QuickAdd / DataviewJS</strong></td>
+<td>internal</td>
+<td>Yes</td>
+<td>All</td>
+<td>Automation inside notes and commands (Chapters 11–12)</td>
+</tr>
+<tr>
+<td><strong>Web Clipper</strong></td>
+<td>in</td>
+<td>No (writes via URI or file)</td>
+<td>Browser</td>
+<td>Capture from the web with templates and AI extraction</td>
+</tr>
+<tr>
+<td><strong>Share Sheet / share intent</strong></td>
+<td>in</td>
+<td>No</td>
+<td>Mobile</td>
+<td>Capture from any app (Chapter 27)</td>
+</tr>
+</tbody>
+</table>
+<p>Rule: <strong>prefer writing files</strong> for anything that runs unattended (cron, webhooks); use URIs/CLI when you need Obsidian to <em>do</em> something (open, run a command, use a template's logic).</p>
+<h2 id="the-obsidian-uri-scheme-core">The <code>obsidian://</code> URI scheme (core)<a class="headerlink" href="#the-obsidian-uri-scheme-core" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>obsidian://open?vault=Main&amp;file=Projects/Alpha
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>obsidian://open?path=/absolute/path/to/note.md
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>obsidian://new?vault=Main&amp;name=Inbox/Quick%20note&amp;content=Hello%0A-%20item
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>obsidian://new?vault=Main&amp;file=Journal/Daily/2026-09-06&amp;append=true&amp;content=...   (append to existing)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>obsidian://new?vault=Main&amp;name=Note&amp;silent=true      (create without opening)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>obsidian://new?vault=Main&amp;name=Note&amp;prepend=true&amp;content=...
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>obsidian://new?vault=Main&amp;name=Note&amp;overwrite=true&amp;content=...
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>obsidian://new?vault=Main&amp;clipboard=true             (content from clipboard)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>obsidian://search?vault=Main&amp;query=tag%3A%23waiting
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>obsidian://hook-get-address                          (Hookmark integration)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>obsidian://unique?vault=Main&amp;name=...&amp;content=...    (1.12: Unique note creator; paneType=tab|split|window)
+</span></code></pre></div>
+<p>Parameters must be URL-encoded (<code>%20</code> space, <code>%0A</code> newline, <code>%23</code> <code>#</code>). <code>vault</code> is the vault <em>name</em> (or its ID). Since 1.13, every URI action shows a <strong>confirmation dialog</strong> the first time; choose <em>Don't ask again</em> to allow-list that action type (managed in Settings).</p>
+<h2 id="advanced-uri-plugin">Advanced URI (plugin)<a class="headerlink" href="#advanced-uri-plugin" title="Permanent link">&para;</a></h2>
+<p><code>obsidian://adv-uri?vault=Main&amp;…</code> with far more parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>URI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Append to today's daily note under a heading</td>
+<td><code>obsidian://adv-uri?vault=Main&amp;daily=true&amp;heading=Log&amp;data=-%2014%3A32%20text&amp;mode=append</code></td>
+</tr>
+<tr>
+<td>Prepend/append/overwrite/new</td>
+<td><code>…&amp;filepath=Inbox/Quick.md&amp;data=…&amp;mode=append</code> (modes: <code>append</code>, <code>prepend</code>, <code>overwrite</code>, <code>new</code>)</td>
+</tr>
+<tr>
+<td>Open by UID (survives renames)</td>
+<td><code>…&amp;uid=abc-123</code> (plugin writes a <code>uid</code> property)</td>
+</tr>
+<tr>
+<td>Set a property</td>
+<td><code>…&amp;filepath=Projects/Alpha.md&amp;frontmatterkey=status&amp;data=done</code></td>
+</tr>
+<tr>
+<td>Run a command</td>
+<td><code>…&amp;commandid=daily-notes</code> or <code>…&amp;commandname=Templater%3A%20Open%20insert%20template%20modal</code></td>
+</tr>
+<tr>
+<td>Open in new pane/window</td>
+<td><code>…&amp;openmode=split</code> / <code>tab</code> / <code>window</code> / <code>popover</code> / <code>silent</code></td>
+</tr>
+<tr>
+<td>Search &amp; replace</td>
+<td><code>…&amp;filepath=…&amp;search=foo&amp;replace=bar</code></td>
+</tr>
+<tr>
+<td>Open a specific block/heading</td>
+<td><code>…&amp;filepath=Note.md&amp;heading=Section</code> or <code>&amp;block=id</code></td>
+</tr>
+<tr>
+<td>Navigate workspace</td>
+<td><code>…&amp;workspace=Planning</code></td>
+</tr>
+<tr>
+<td>Run a template's logic</td>
+<td>Not directly; run a Templater/QuickAdd command via <code>commandid=</code></td>
+</tr>
+</tbody>
+</table>
+<p>The plugin adds commands <em>Copy URI for current file / block / daily note / command</em> — use them to generate URIs without memorizing the syntax. Cross-vault links inside notes are also Advanced URIs.</p>
+<h2 id="obsidian-cli-112">Obsidian CLI (1.12+)<a class="headerlink" href="#obsidian-cli-112" title="Permanent link">&para;</a></h2>
+<p>Enable in Settings → General → <em>Command line interface</em> and let it register the PATH (installer 1.12.7+; macOS symlinks <code>/usr/local/bin/obsidian</code>, Linux copies to <code>~/.local/bin/obsidian</code>, Windows adds <code>Obsidian.com</code> redirector). Obsidian must be running (the first command launches it). Syntax: <code>obsidian &lt;command&gt; param=value flag</code>; quote values with spaces; <code>\n</code> for newlines; <code>vault=Name</code> as the first parameter targets a vault; if your terminal's cwd is a vault, that vault is used. <code>--copy</code> copies output to the clipboard. Run <code>obsidian</code> alone for the TUI with autocomplete and history.</p>
+<h3 id="command-cheat-sheet">Command cheat sheet<a class="headerlink" href="#command-cheat-sheet" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General</td>
+<td><code>help [command]</code>, <code>version</code>, <code>reload</code>, <code>restart</code></td>
+</tr>
+<tr>
+<td>Vault</td>
+<td><code>vault [info=name\|path\|files\|folders\|size]</code>, <code>vaults [verbose]</code>, <code>vault:open name=…</code> (TUI)</td>
+</tr>
+<tr>
+<td>Files</td>
+<td><code>file [file=\|path=]</code>, <code>files [folder= ext= total]</code>, <code>folder path= [info=]</code>, <code>folders</code>, <code>open file= [newtab]</code>, <code>create name=\|path= [content= template= overwrite open newtab]</code>, <code>read [file=]</code>, <code>append content= [file= inline]</code>, <code>prepend content=</code>, <code>move to=</code>, <code>rename name=</code>, <code>delete [permanent]</code></td>
+</tr>
+<tr>
+<td>Daily</td>
+<td><code>daily [paneType=]</code>, <code>daily:path</code>, <code>daily:read</code>, <code>daily:append content= [inline open]</code>, <code>daily:prepend content=</code></td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>search query= [path= limit= format=text\|json total case]</code>, <code>search:context query=</code> (grep-style <code>path:line: text</code>), <code>search:open [query=]</code></td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td><code>tasks [file= path= status= total done todo verbose format= active daily]</code>, <code>task ref=path:line \| file= line= [status= toggle done todo]</code></td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><code>properties [file= name= count sort=count format=yaml\|json\|tsv total counts active]</code>, <code>property:set name= value= [type= file=]</code>, <code>property:read name=</code>, <code>property:remove name=</code>, <code>aliases</code>, <code>tags [sort=count counts total active]</code>, <code>tag name= [verbose]</code></td>
+</tr>
+<tr>
+<td>Links</td>
+<td><code>backlinks [file= counts total format=]</code>, <code>links [file= total]</code>, <code>unresolved [total counts verbose]</code>, <code>orphans [total]</code>, <code>deadends [total]</code></td>
+</tr>
+<tr>
+<td>Outline</td>
+<td><code>outline [file= format=tree\|md\|json total]</code></td>
+</tr>
+<tr>
+<td>Bases</td>
+<td><code>bases</code>, <code>base:views</code>, <code>base:create [file= view= name= content= open]</code>, <code>base:query file= [view= format=json\|csv\|tsv\|md\|paths]</code></td>
+</tr>
+<tr>
+<td>Bookmarks</td>
+<td><code>bookmarks [total verbose format=]</code>, <code>bookmark file= [subpath= folder= search= url= title=]</code></td>
+</tr>
+<tr>
+<td>Commands/hotkeys</td>
+<td><code>commands [filter=]</code>, <code>command id=</code>, <code>hotkeys</code>, <code>hotkey id=</code></td>
+</tr>
+<tr>
+<td>Templates</td>
+<td><code>templates</code>, <code>template:read name= [title= resolve]</code>, <code>template:insert name=</code></td>
+</tr>
+<tr>
+<td>Unique</td>
+<td><code>unique [name= content= paneType= open]</code></td>
+</tr>
+<tr>
+<td>Plugins</td>
+<td><code>plugins [filter=core\|community versions format=]</code>, <code>plugins:enabled</code>, <code>plugins:restrict on\|off</code>, <code>plugin id=</code>, <code>plugin:enable id=</code>, <code>plugin:disable id=</code>, <code>plugin:install id= [enable]</code>, <code>plugin:uninstall id=</code>, <code>plugin:reload id=</code></td>
+</tr>
+<tr>
+<td>Themes/snippets</td>
+<td><code>themes</code>, <code>theme [name=]</code>, <code>theme:set name=</code>, <code>theme:install name= [enable]</code>, <code>snippets</code>, <code>snippets:enabled</code>, <code>snippet:enable name=</code>, <code>snippet:disable name=</code></td>
+</tr>
+<tr>
+<td>History</td>
+<td><code>diff [file= from= to= filter=local\|sync]</code>, <code>history [file=]</code>, <code>history:list</code>, <code>history:read version=</code>, <code>history:restore version=</code>, <code>history:open</code></td>
+</tr>
+<tr>
+<td>Sync</td>
+<td><code>sync on\|off</code>, <code>sync:status</code>, <code>sync:history</code>, <code>sync:read version=</code>, <code>sync:restore version=</code>, <code>sync:open</code>, <code>sync:deleted</code></td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><code>publish:site</code>, <code>publish:list</code>, <code>publish:status [new changed deleted]</code>, <code>publish:add [file= changed]</code>, <code>publish:remove</code>, <code>publish:open</code></td>
+</tr>
+<tr>
+<td>Workspace</td>
+<td><code>workspace [ids]</code>, <code>workspaces</code>, <code>workspace:save [name=]</code>, <code>workspace:load name=</code>, <code>workspace:delete name=</code>, <code>tabs [ids]</code>, <code>tab:open [group= file= view=]</code>, <code>recents</code></td>
+</tr>
+<tr>
+<td>Misc</td>
+<td><code>random [folder= newtab]</code>, <code>random:read</code>, <code>web url= [newtab]</code>, <code>wordcount [file= words characters]</code></td>
+</tr>
+<tr>
+<td>Developer</td>
+<td><code>devtools</code>, <code>dev:debug on\|off</code>, <code>dev:cdp method= params=</code>, <code>dev:errors [clear]</code>, <code>dev:screenshot path=</code>, <code>dev:console [limit= level= clear]</code>, <code>dev:css selector= [prop=]</code>, <code>dev:dom selector= [attr= css= total text inner all]</code>, <code>dev:mobile on\|off</code>, <code>eval code=</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link">&para;</a></h3>
+<p><strong>Morning routine</strong> (shell alias <code>morning</code>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>obsidian<span class="w"> </span>workspace:load<span class="w"> </span><span class="nv">name</span><span class="o">=</span>Planning
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>obsidian<span class="w"> </span>daily
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>obsidian<span class="w"> </span>daily:append<span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;- </span><span class="k">$(</span>date<span class="w"> </span>+%H:%M<span class="k">)</span><span class="s2"> Started the day. Weather: </span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;wttr.in/?format=%C+%t&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>obsidian<span class="w"> </span>tasks<span class="w"> </span>daily<span class="w"> </span>todo
+</span></code></pre></div>
+<p><strong>Quick capture from anywhere</strong> (bind to a global hotkey via your launcher):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># usage: cap &quot;text&quot;   → appends to today&#39;s Log</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>obsidian<span class="w"> </span>daily:append<span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;- </span><span class="k">$(</span>date<span class="w"> </span>+%H:%M<span class="k">)</span><span class="s2"> </span><span class="nv">$*</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p><strong>Nightly export of key bases to CSV</strong> (cron):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">out</span><span class="o">=</span>~/Backups/obsidian-csv/<span class="k">$(</span>date<span class="w"> </span>+%F<span class="k">)</span><span class="p">;</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$out</span><span class="s2">&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">for</span><span class="w"> </span>b<span class="w"> </span><span class="k">in</span><span class="w"> </span>Accounts<span class="w"> </span>Subscriptions<span class="w"> </span>People<span class="w"> </span>Projects<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>obsidian<span class="w"> </span>base:query<span class="w"> </span><span class="nv">file</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$b</span><span class="s2">&quot;</span><span class="w"> </span><span class="nv">format</span><span class="o">=</span>csv<span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$out</span><span class="s2">/</span><span class="nv">$b</span><span class="s2">.csv&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">done</span>
+</span></code></pre></div>
+<p><strong>Create a meeting note from a calendar event</strong> (called by a calendar hook / Shortcut with title and attendee):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">title</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="nv">who</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%F<span class="k">)</span><span class="s2"> </span><span class="nv">$title</span><span class="s2">&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>obsidian<span class="w"> </span>create<span class="w"> </span><span class="nv">path</span><span class="o">=</span><span class="s2">&quot;Work/Meetings/</span><span class="nv">$name</span><span class="s2">.md&quot;</span><span class="w"> </span><span class="nv">template</span><span class="o">=</span>tpl-meeting<span class="w"> </span>open
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>obsidian<span class="w"> </span>property:set<span class="w"> </span><span class="nv">file</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$name</span><span class="s2">&quot;</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span>attendees<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">&quot;[[</span><span class="si">${</span><span class="nv">who</span><span class="si">}</span><span class="s2">]]&quot;</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span>list
+</span></code></pre></div>
+<p><strong>Vault health report</strong> (weekly):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Vault health </span><span class="k">$(</span>date<span class="w"> </span>+%F<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Files: </span><span class="k">$(</span>obsidian<span class="w"> </span>files<span class="w"> </span>total<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Orphans: </span><span class="k">$(</span>obsidian<span class="w"> </span>orphans<span class="w"> </span>total<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Dead ends: </span><span class="k">$(</span>obsidian<span class="w"> </span>deadends<span class="w"> </span>total<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Unresolved links: </span><span class="k">$(</span>obsidian<span class="w"> </span>unresolved<span class="w"> </span>total<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Open tasks: </span><span class="k">$(</span>obsidian<span class="w"> </span>tasks<span class="w"> </span>todo<span class="w"> </span>total<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;## Top unresolved&quot;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span>obsidian<span class="w"> </span>unresolved<span class="w"> </span>counts<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/^/- /&#39;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="o">}</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/health.md
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>obsidian<span class="w"> </span>create<span class="w"> </span><span class="nv">path</span><span class="o">=</span><span class="s2">&quot;Meta/Health </span><span class="k">$(</span>date<span class="w"> </span>+%F<span class="k">)</span><span class="s2">.md&quot;</span><span class="w"> </span><span class="nv">content</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>cat<span class="w"> </span>/tmp/health.md<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>overwrite
+</span></code></pre></div>
+<p><strong>Set up a new machine's plugins</strong> (from a list exported with <code>obsidian plugins:enabled filter=community</code>):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span><span class="w"> </span>id<span class="w"> </span><span class="k">in</span><span class="w"> </span>templater-obsidian<span class="w"> </span>obsidian-tasks-plugin<span class="w"> </span>dataview<span class="w"> </span>periodic-notes<span class="w"> </span>calendar<span class="w"> </span>omnisearch<span class="w"> </span>obsidian-linter<span class="w"> </span>obsidian-style-settings<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>obsidian<span class="w"> </span>plugin:install<span class="w"> </span><span class="nv">id</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$id</span><span class="s2">&quot;</span><span class="w"> </span><span class="nb">enable</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">done</span>
+</span></code></pre></div>
+<p><strong>JavaScript inside Obsidian from the terminal</strong>: <code>obsidian eval code="app.vault.getMarkdownFiles().filter(f=&gt;f.path.startsWith('Inbox/')).length"</code> — anything the plugin API can do. Combine with <code>dev:screenshot</code> and <code>dev:errors</code> for testing templates and plugins.</p>
+<h2 id="shell-commands-plugin">Shell commands plugin<a class="headerlink" href="#shell-commands-plugin" title="Permanent link">&para;</a></h2>
+<p>Define commands with variables — <code>{{file_path:absolute}}</code>, <code>{{file_name}}</code>, <code>{{title}}</code>, <code>{{selection}}</code>, <code>{{clipboard}}</code>, <code>{{date:YYYY-MM-DD}}</code>, <code>{{yaml_value:status}}</code>, <code>{{folder_path}}</code>, <code>{{vault_path}}</code>, custom prompt variables — and choose where output goes (notice, current note at cursor, clipboard, a new note, a modal). Assign hotkeys. Examples:</p>
+<ul>
+<li><strong>Pandoc export</strong> of the current note (Chapter 31).</li>
+<li><strong>Open the note's folder</strong> in Finder/Explorer.</li>
+<li><strong>Run a Python script</strong> over the vault (e.g. generate a Base from a CSV; fetch weather into the daily note).</li>
+<li><strong>Git snapshot</strong>: <code>git -C "{{vault_path}}" add -A &amp;&amp; git -C "{{vault_path}}" commit -qm "snapshot {{date:YYYY-MM-DD HH:mm}}"</code>.</li>
+<li><strong>Whisper transcription</strong> of a dropped audio file into the note.</li>
+<li><strong>hledger/beancount report</strong> into a code block (Chapter 21).</li>
+<li><strong>Image compression</strong> of a pasted image (<code>cwebp</code>).</li>
+</ul>
+<p>Security: commands run with your user privileges; do not sync command definitions blindly to machines with different paths; the plugin's "confirm before execution" option is worth enabling for destructive commands.</p>
+<h2 id="local-rest-api-plugin">Local REST API plugin<a class="headerlink" href="#local-rest-api-plugin" title="Permanent link">&para;</a></h2>
+<p>Runs an HTTPS server on <code>localhost:27124</code> (HTTP on 27123 optional) with an API key. Endpoints: <code>GET/PUT/POST/PATCH/DELETE /vault/{path}</code> (read/write/append/patch notes — PATCH can insert under a heading or block), <code>/periodic/daily/</code> (today's note), <code>/search/simple/?query=</code> and <code>/search/</code> (Dataview DQL or JsonLogic), <code>/commands/</code> (list/execute), <code>/open/{path}</code>, <code>/active/</code> (the active note). Uses: Raycast/Alfred extensions, browser bookmarklets, MCP servers for AI assistants (Chapter 30), Home Assistant, n8n/Zapier via a tunnel (careful), scripts from other machines on your LAN.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-sk<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$OBS_KEY</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: text/markdown&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;https://127.0.0.1:27124/periodic/daily/&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span>--data-binary<span class="w"> </span><span class="s2">&quot;- </span><span class="k">$(</span>date<span class="w"> </span>+%H:%M<span class="k">)</span><span class="s2"> logged via REST&quot;</span>
+</span></code></pre></div>
+<p>With the CLI now in core, the REST API's niche is <em>remote</em> and <em>programmatic</em> access from tools that cannot shell out.</p>
+<h2 id="launchers">Launchers<a class="headerlink" href="#launchers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Raycast</strong> (macOS): the Obsidian extension (search notes, create, append to daily, random note, bookmarked notes) plus Script Commands wrapping the CLI. Global hotkey → "Append to daily" is the best capture there is.</li>
+<li><strong>Alfred</strong> (macOS): the Obsidian workflow; or a <code>bash</code> script filter around <code>obsidian search</code>.</li>
+<li><strong>AutoHotkey / PowerToys Run / Flow Launcher / Keypirinha</strong> (Windows): scripts calling <code>obsidian …</code> or <code>start obsidian://…</code>.</li>
+<li><strong>Albert / Ulauncher / rofi</strong> (Linux): same.</li>
+<li><strong>Hookmark</strong> (macOS): bidirectional links between Obsidian notes and files/emails/URLs in other apps (<code>obsidian://hook-get-address</code>).</li>
+<li><strong>Keyboard Maestro / BetterTouchTool / Espanso</strong>: text expansion and macros (Espanso snippets for <code>;;date</code>, <code>;;meet</code> templates work in any app including Obsidian).</li>
+</ul>
+<h2 id="apple-shortcuts-and-tasker">Apple Shortcuts and Tasker<a class="headerlink" href="#apple-shortcuts-and-tasker" title="Permanent link">&para;</a></h2>
+<p>Chapter 27 covered the mobile side. Desktop Shortcuts (macOS) can run shell scripts (CLI) and AppleScript; a Shortcut in the menu bar "New meeting from selected calendar event" → CLI create is a two-action shortcut. Tasker: <code>obsidian://</code> intents, file writes, HTTP requests to the REST API on the LAN.</p>
+<h2 id="web-clipper">Web Clipper<a class="headerlink" href="#web-clipper" title="Permanent link">&para;</a></h2>
+<p>The official browser extension (Chrome, Firefox, Safari, Edge, Brave, Arc; iOS Safari; Android Firefox). Settings:</p>
+<ul>
+<li><strong>Templates</strong> with <strong>triggers</strong> (URL patterns or schema.org types): a default clipping template, plus specialized ones — <code>recipe</code> (schema Recipe → ingredients/steps), <code>youtube.com</code> (title, channel, URL, transcript if available), <code>arxiv.org</code> (paper metadata), <code>amazon</code>/<code>goodreads</code> (book metadata → <code>tpl-book</code> properties), <code>github.com</code> (repo, stars, README summary).</li>
+<li><strong>Variables</strong>: <code>{{title}}</code>, <code>{{url}}</code>, <code>{{author}}</code>, <code>{{published}}</code>, <code>{{date}}</code>, <code>{{content}}</code> (readability-extracted body), <code>{{selection}}</code>, <code>{{highlights}}</code>, <code>{{schema:@Recipe.recipeIngredient}}</code>, <code>{{meta:property:og:image}}</code>, plus filters (<code>|date:"YYYY-MM-DD"</code>, <code>|slice</code>, <code>|wikilink</code>, <code>|list</code>, <code>|strip_tags</code>, <code>|markdown</code>, <code>|camel</code>, <code>|safe_name</code>…).</li>
+<li><strong>Properties</strong> section per template → typed frontmatter (<code>type: source</code>, <code>medium: article</code>, <code>status: to-read</code>, <code>topics: []</code>).</li>
+<li><strong>Behavior</strong>: create a new note in a folder, or append to an existing note / today's daily note; note name template (<code>{{title|safe_name}}</code>).</li>
+<li><strong>Highlighter</strong>: highlight on the page; clip only highlights (with context) or highlights + article.</li>
+<li><strong>Interpreter</strong>: attach a model (OpenAI/Anthropic/Gemini/Ollama local) and add prompt variables to the template: <code>{{"three bullet summary"}}</code>, <code>{{"list people mentioned as wikilinks"}}</code>, <code>{{"extract ingredients as a markdown list"}}</code>. The model fills them at clip time. Use it to arrive pre-distilled; keep prompts short and structural.</li>
+</ul>
+<p>Capture lands in <code>Inbox/</code> or straight into <code>Sources/Articles/</code>; the vault's folder templates do not run (the clipper writes the whole note), so put the full frontmatter in the clipper template.</p>
+<h2 id="integration-recipes">Integration recipes<a class="headerlink" href="#integration-recipes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Integration</th>
+<th>Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Calendar → meeting notes</strong></td>
+<td>Google Calendar plugin (creates notes from events), Full Calendar (ICS view), or a Shortcut/script per event calling the CLI with <code>template=tpl-meeting</code>; a cron job each morning that lists today's events into the daily note's <code>## Agenda</code> (icalBuddy on macOS, <code>gcalcli</code>, or the Google Calendar API).</td>
+</tr>
+<tr>
+<td><strong>Email → vault</strong></td>
+<td>Forward to a mailbox polled by a script (IMAP → Markdown → <code>Inbox/</code>); Zapier/n8n/Make "email parser → write file to Dropbox folder inside vault" (only if the vault is on a synced folder); Apple Mail rule → Shortcut → file; Hookmark links to messages instead of copying them.</td>
+</tr>
+<tr>
+<td><strong>Readwise / Snipd / Kindle</strong></td>
+<td>Readwise Official plugin (highlights → notes with templates); Kindle Highlights plugin; Snipd → Readwise or its own Obsidian export.</td>
+</tr>
+<tr>
+<td><strong>Zotero</strong></td>
+<td>Chapter 18.</td>
+</tr>
+<tr>
+<td><strong>Strava / Garmin / Apple Health</strong></td>
+<td>Strava API or Health Auto Export → script → <code>create</code> workout notes with properties (Chapter 20).</td>
+</tr>
+<tr>
+<td><strong>Letterboxd / Goodreads / Trakt / Last.fm</strong></td>
+<td>CSV export → Python script → <code>type: source</code> notes; run yearly or on demand.</td>
+</tr>
+<tr>
+<td><strong>Todoist / Things / Reminders / TickTick</strong></td>
+<td>Todoist Sync plugin (two-way); Things via URL scheme and a script; Apple Reminders via Shortcuts (read reminders → tasks in the daily note). Most people keep tasks <em>in</em> Obsidian and use the external app only for alarms.</td>
+</tr>
+<tr>
+<td><strong>Slack / Teams / Discord</strong></td>
+<td>A bot or Zap that posts messages you react to (e.g. 📌) into <code>Inbox/</code>; or copy-paste with the Advanced URI bookmarklet.</td>
+</tr>
+<tr>
+<td><strong>Browser bookmarks / Pocket / Instapaper</strong></td>
+<td>Export → script → <code>Sources/Articles/</code> with <code>status: to-read</code>; or switch to the Web Clipper as the single capture path.</td>
+</tr>
+<tr>
+<td><strong>Photos</strong></td>
+<td>Monthly: a script copies "favourited this month" photos (downscaled) into <code>Attachments/photos/YYYY-MM/</code> and writes embeds into the monthly note.</td>
+</tr>
+<tr>
+<td><strong>Weather / location / quotes</strong></td>
+<td>Templater <code>tp.web.request</code> in the daily template; or a cron <code>daily:prepend</code>.</td>
+</tr>
+<tr>
+<td><strong>Home Assistant</strong></td>
+<td>REST API or file writes: sensor summaries into the daily note; a "log energy use" automation.</td>
+</tr>
+<tr>
+<td><strong>Git hooks</strong></td>
+<td>Post-commit hook that runs a Linter pass or regenerates a Base/CSV.</td>
+</tr>
+<tr>
+<td><strong>AI assistants</strong></td>
+<td>Chapter 30: MCP servers over the vault folder or REST API; Copilot/Smart Connections inside Obsidian; CLI <code>read</code>/<code>search</code> piped to an LLM CLI.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="design-principles-for-automations">Design principles for automations<a class="headerlink" href="#design-principles-for-automations" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Idempotent</strong>: running twice should not duplicate (check for existing note; use <code>overwrite</code> deliberately or <code>append</code> with a marker).</li>
+<li><strong>Type on arrival</strong>: automations write full frontmatter so Bases see the note immediately.</li>
+<li><strong>Land in <code>Inbox/</code> unless certain</strong>: automated notes with a <code>source: automation</code> property, reviewed in the weekly sweep.</li>
+<li><strong>Log</strong>: automations append a line to <code>Meta/Automation Log.md</code> (<code>daily:append</code> to a dedicated note) so failures are visible.</li>
+<li><strong>Secrets outside the vault</strong>: API keys in the OS keychain/environment, never in scripts stored in the vault (or <code>.gitignore</code> them).</li>
+<li><strong>Fail safe</strong>: if Obsidian is not running and the script needs it, the CLI launches it; for unattended jobs, write files instead.</li>
+</ol>
+<h2 id="key-takeaways">Key takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Four surfaces: write files (most robust), <code>obsidian://</code> + Advanced URI (open/append/run from anywhere), the Obsidian CLI (full scripting of the running app), and Shell commands / Local REST API (out of and into Obsidian from other tools).</li>
+<li>The CLI cheat sheet covers files, daily notes, search, tasks, properties, links, bases, plugins, sync, publish, workspaces and developer commands; wrap it in shell scripts bound to launcher hotkeys and cron.</li>
+<li>Web Clipper templates with triggers, typed properties and Interpreter prompts make web capture arrive structured and pre-distilled.</li>
+<li>Integration recipes (calendar, email, reading services, fitness, media, tasks, home automation) all reduce to: get data → write typed Markdown → land in Inbox or the right folder.</li>
+<li>Automations should be idempotent, typed on arrival, logged, and keep secrets out of the vault.</li>
+</ul>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p><a href="../30-ai/">Chapter 30: AI in Your Vault →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../28-customization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customization — Themes, CSS and Layout">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Customization — Themes, CSS and Layout
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../30-ai/" class="md-footer__link md-footer__link--next" aria-label="Next: AI in Your Vault">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AI in Your Vault
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Written 2026. Content may be freely shared with attribution.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/gorg667/obsidian-guide" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
