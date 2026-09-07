@@ -1,0 +1,1842 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The most detailed, comprehensive guide to mastering Obsidian and building a life operating system with it.">
+      
+      
+      
+        <link rel="canonical" href="https://gorg667.github.io/obsidian-guide/05-properties-tags-and-metadata/">
+      
+      
+        <link rel="prev" href="../04-links-and-graph/">
+      
+      
+        <link rel="next" href="../06-search/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Properties, Tags and Metadata Design - The Complete Obsidian Mastery Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#properties-tags-and-metadata-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-header__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Complete Obsidian Mastery Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Properties, Tags and Metadata Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-philosophy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I — Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../07-pkm-methodologies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II — Systems & Methodology
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-nav__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Complete Obsidian Mastery Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I — Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I — Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy and Mental Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-setup-and-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup, Settings and Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-markdown-and-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown and Editing Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-links-and-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Links, Backlinks, Graph and Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Properties, Tags and Metadata Design
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Properties, Tags and Metadata Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties: mechanics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties: mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-special-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reserved / special properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-rules-that-bite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML rules that bite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-vs-inline-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties vs inline fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags: mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-decision-framework-folder-tag-property-or-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The decision framework: folder, tag, property or link?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-the-schema-for-a-whole-life-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing the schema for a whole-life vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Designing the schema for a whole-life vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-properties-every-note-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal properties (every note type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type catalogue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlled-vocabularies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlled vocabularies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-and-refactoring-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migrating and refactoring metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-and-dataview-see-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases and Dataview see the same data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-hygiene-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata hygiene routine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II — Systems & Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II — Systems & Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-pkm-methodologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PKM Methodologies Compared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-vault-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Architecture — the Reference Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties: mechanics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties: mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-special-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reserved / special properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-rules-that-bite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YAML rules that bite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-vs-inline-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties vs inline fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tags: mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-decision-framework-folder-tag-property-or-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The decision framework: folder, tag, property or link?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-the-schema-for-a-whole-life-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Designing the schema for a whole-life vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Designing the schema for a whole-life vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#universal-properties-every-note-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Universal properties (every note type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type catalogue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlled-vocabularies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlled vocabularies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-and-refactoring-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migrating and refactoring metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bases-and-dataview-see-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases and Dataview see the same data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-hygiene-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata hygiene routine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01-philosophy/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part I — Foundations
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/gorg667/obsidian-guide/edit/main/docs/05-properties-tags-and-metadata.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="properties-tags-and-metadata-design">Properties, Tags and Metadata Design<a class="headerlink" href="#properties-tags-and-metadata-design" title="Permanent link">&para;</a></h1>
+<p>Metadata is what turns a folder of notes into a database you can query. In Obsidian that means <strong>properties</strong> (typed YAML frontmatter), <strong>tags</strong>, and to a lesser extent <strong>inline fields</strong> (a Dataview convention). Get the schema right and Bases, Dataview, templates, and dashboards all become trivial. Get it wrong — fifteen synonyms for the same status, tags that should be links, dates as free text — and every query becomes a cleanup job. This chapter covers the mechanics precisely, then gives a decision framework and a concrete schema for a whole-life vault.</p>
+<h2 id="properties-mechanics">Properties: mechanics<a class="headerlink" href="#properties-mechanics" title="Permanent link">&para;</a></h2>
+<p>Properties live in YAML frontmatter between <code>---</code> fences at the very top of a note. Since Obsidian 1.4 there is a typed editor (Settings → Editor → <em>Properties in document</em>: Visible / Source / Hidden); since 1.9 properties are the fuel for Bases; since 1.10 the Properties core plugin is on by default.</p>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>YAML example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text</strong></td>
+<td><code>title: My note</code></td>
+<td>Default. Since 1.13, renders Markdown links inside.</td>
+</tr>
+<tr>
+<td><strong>List</strong></td>
+<td><code>tags: [a, b]</code> or bulleted list</td>
+<td>Each item a text (or link). Duplicates allowed since 1.10.</td>
+</tr>
+<tr>
+<td><strong>Number</strong></td>
+<td><code>rating: 4.5</code></td>
+<td>Sortable and summable in Bases.</td>
+</tr>
+<tr>
+<td><strong>Checkbox</strong></td>
+<td><code>done: true</code></td>
+<td><code>true</code>/<code>false</code>; <code>null</code> (indeterminate) sorts with false.</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td><code>date: 2026-09-06</code></td>
+<td>ISO <code>YYYY-MM-DD</code>; date picker in UI.</td>
+</tr>
+<tr>
+<td><strong>Date &amp; time</strong></td>
+<td><code>created: 2026-09-06T14:30:00</code></td>
+<td>ISO 8601; timezone offsets parsed since 1.10.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>type is per property name, vault-wide</strong> (stored in <code>.obsidian/types.json</code>). If <code>rating</code> is a number in one note it is a number everywhere. Change a type via the property's icon menu → <em>Property type</em>. Since 1.13 the menu makes clear whether a type was inferred or set manually. When Obsidian cannot parse a value as the declared type it shows a warning icon — this is how you find <code>rating: four</code>.</p>
+<h3 id="reserved-special-properties">Reserved / special properties<a class="headerlink" href="#reserved-special-properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tags</code></td>
+<td>Tags (no <code>#</code>). <code>tag</code> singular also works but do not mix.</td>
+</tr>
+<tr>
+<td><code>aliases</code></td>
+<td>Alternative names for links and the quick switcher.</td>
+</tr>
+<tr>
+<td><code>cssclasses</code></td>
+<td>Adds CSS classes to the note's view container for per-note styling (<code>cssclass</code> singular is legacy).</td>
+</tr>
+<tr>
+<td><code>publish</code></td>
+<td><code>true</code>/<code>false</code> controls Obsidian Publish inclusion.</td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>Custom URL slug on Publish.</td>
+</tr>
+<tr>
+<td><code>description</code>, <code>image</code>, <code>cover</code></td>
+<td>Used by Publish for social metadata.</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><em>Not</em> special in Obsidian (filename is the title) but used by some plugins and publishers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editing-properties">Editing properties<a class="headerlink" href="#editing-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The property editor: click the value; <span class="keys"><kbd class="key-tab">Tab</kbd></span> moves between fields; type a new key name in the empty row; the suggester offers existing keys and values.</li>
+<li><strong>Add file property</strong> command (assign a hotkey) and <strong>Add property in current file</strong> via the command palette.</li>
+<li>Right-click a key → <em>Rename</em> (only this note) or use the <strong>Properties view</strong> (sidebar, core) to see every property in the vault with counts, rename or delete vault-wide (1.10+), and change types. <span class="keys"><kbd class="key-backspace">Backspace</kbd></span> deletes selected properties in that view (1.13).</li>
+<li>The CLI: <code>obsidian property:set name=status value=active</code>, <code>property:read</code>, <code>property:remove</code>, <code>properties counts sort=count</code> — see Chapter 29.</li>
+<li>Templater and QuickAdd write properties at note creation (Chapter 11). Meta Bind renders input widgets bound to properties inside the note body.</li>
+</ul>
+<h3 id="yaml-rules-that-bite">YAML rules that bite<a class="headerlink" href="#yaml-rules-that-bite" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Comments are allowed.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Meeting:</span><span class="nv"> </span><span class="s">kickoff&quot;</span><span class="w">        </span><span class="c1"># colon in value → quote it</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[[Jane</span><span class="nv"> </span><span class="s">Doe]]&quot;</span><span class="w">           </span><span class="c1"># wikilink → MUST quote, or YAML reads a nested list</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">links</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;[[Note</span><span class="nv"> </span><span class="s">A]]&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;[[Note</span><span class="nv"> </span><span class="s">B]]&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project/alpha</span><span class="w">                </span><span class="c1"># no leading #; nested via /</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meeting</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active</span><span class="w">                   </span><span class="c1"># plain word, fine</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">08</span><span class="w">                        </span><span class="c1"># leading zero → string, not number! use 8</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w">                     </span><span class="c1"># number; &quot;1.0&quot; would be text</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14:30</span><span class="w">                      </span><span class="c1"># YAML may parse as sexagesimal number → quote &quot;14:30&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">yes_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w">                   </span><span class="c1"># YAML 1.1 turns yes/no/on/off into booleans → quote</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nt">empty</span><span class="p">:</span><span class="w">                           </span><span class="c1"># null; Bases treats as empty</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">multiline</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="no">Preserved</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="no">line breaks</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">folded</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="no">Joined into</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="no">one line</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nn">---</span>
+</span></code></pre></div>
+<ul>
+<li>Frontmatter must begin on <strong>line 1</strong>. A blank line before <code>---</code> makes it plain text.</li>
+<li>Indentation is spaces, never tabs.</li>
+<li>Unknown structures (nested objects) are preserved but shown as raw text in the editor; Bases can read them with <code>note.obj.key</code>.</li>
+<li>Obsidian rewrites the frontmatter when you edit via UI; it preserves key order but may reformat lists. If exact formatting matters (e.g. for another tool), edit in Source mode.</li>
+</ul>
+<h3 id="properties-vs-inline-fields">Properties vs inline fields<a class="headerlink" href="#properties-vs-inline-fields" title="Permanent link">&para;</a></h3>
+<p>Dataview introduced <strong>inline fields</strong>: <code>key:: value</code> anywhere in the body, or <code>[key:: value]</code> inline, or <code>(key:: value)</code> hidden-key. They are <em>not</em> properties: Obsidian core ignores them, Bases cannot see them, and search treats them as text. Use them only for data that genuinely belongs at a specific line (e.g. <code>- 07:30 wake [mood:: 7]</code> in a daily log that Dataview will chart). For everything else, use properties.</p>
+<h2 id="tags-mechanics">Tags: mechanics<a class="headerlink" href="#tags-mechanics" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>#tag</code> in body text or <code>tags: [tag]</code> in properties. Both count identically for search, the Tags view, Bases <code>file.tags</code>, and Dataview <code>file.tags</code>.</li>
+<li>Nested: <code>#area/health/sleep</code>. Searching <code>tag:#area/health</code> matches children. <code>file.hasTag("area")</code> in Bases matches nested tags too.</li>
+<li>Allowed characters: letters, numbers, <code>_</code>, <code>-</code>, <code>/</code>. Cannot be all digits. Case-insensitive for matching but the Tags view shows the first-seen casing — pick one.</li>
+<li>Click a tag to search for it. The <strong>Tags view</strong> (core) lists all tags with counts, nesting, and sort options; drag-and-drop nesting is via the <strong>Tag Wrangler</strong> plugin, which also renames tags vault-wide (core cannot).</li>
+<li>Escape a literal hash with <code>\#</code>.</li>
+<li>Tags in <code>%% comments %%</code> still count as tags. Tags in code blocks do not.</li>
+</ul>
+<h2 id="the-decision-framework-folder-tag-property-or-link">The decision framework: folder, tag, property or link?<a class="headerlink" href="#the-decision-framework-folder-tag-property-or-link" title="Permanent link">&para;</a></h2>
+<p>The most common structural mistake is using the wrong primitive. Use this table.</p>
+<table>
+<thead>
+<tr>
+<th>Question about the data</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is it the <strong>kind</strong> of note, with one value, driving templates and dashboards?</td>
+<td><strong>Property <code>type</code></strong> (and usually a folder)</td>
+<td><code>type: meeting</code>, <code>type: person</code>, <code>type: book</code></td>
+</tr>
+<tr>
+<td>Does it have a <strong>fixed set of values</strong> you will filter/sort by?</td>
+<td><strong>Property</strong></td>
+<td><code>status: active</code>, <code>priority: 2</code>, <code>rating: 4</code></td>
+</tr>
+<tr>
+<td>Is it a <strong>date or number</strong>?</td>
+<td><strong>Property</strong> (typed)</td>
+<td><code>due: 2026-10-01</code>, <code>cost: 49.99</code></td>
+</tr>
+<tr>
+<td>Could the value <strong>have its own note</strong> with content?</td>
+<td><strong>Link</strong> (in a property if structured, in text if narrative)</td>
+<td><code>project: "[[Alpha]]"</code>, <code>author: "[[Cal Newport]]"</code></td>
+</tr>
+<tr>
+<td>Is it a <strong>cross-cutting, informal label</strong> used for quick filtering across many types?</td>
+<td><strong>Tag</strong></td>
+<td><code>#review</code>, <code>#idea</code>, <code>#favorite</code>, <code>#urgent</code></td>
+</tr>
+<tr>
+<td>Is it a <strong>state of the note itself</strong> (workflow) rather than of its subject?</td>
+<td><strong>Tag</strong> or <code>status</code> property</td>
+<td><code>#inbox</code>, <code>#to-process</code>, <code>#stub</code></td>
+</tr>
+<tr>
+<td>Does it determine <strong>where attachments and templates apply</strong>, or need physical separation?</td>
+<td><strong>Folder</strong></td>
+<td><code>Journal/</code>, <code>Templates/</code>, <code>Attachments/</code>, <code>Archive/</code></td>
+</tr>
+<tr>
+<td>Is it a <strong>hierarchy of topics</strong>?</td>
+<td><strong>Links to MOCs</strong>, not nested tags or deep folders</td>
+<td><code>[[Health MOC]]</code> ← <code>[[Sleep MOC]]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Rules of thumb:</p>
+<ol>
+<li><strong>If you would ever want to write a sentence about it, it is a link, not a tag.</strong> Tags cannot hold content; notes can.</li>
+<li><strong>If you would ever sort by it, it is a property.</strong> Tags are booleans; properties have values.</li>
+<li><strong>Tags are for verbs and adjectives; links are for nouns.</strong> <code>#todo</code>, <code>#unclear</code>, <code>#favorite</code> vs <code>[[Berlin]]</code>, <code>[[Stoicism]]</code>.</li>
+<li><strong>Folders are for the machine, not for meaning.</strong> Attachments route to them; templates apply per folder; sync/publish exclude them. Beyond ~10 top-level folders you are filing, not thinking.</li>
+<li><strong>Prefer one <code>type</code> property over one folder per type.</strong> A folder per type <em>also</em> works — and Bases can filter by either — but properties survive when you move notes.</li>
+</ol>
+<h2 id="designing-the-schema-for-a-whole-life-vault">Designing the schema for a whole-life vault<a class="headerlink" href="#designing-the-schema-for-a-whole-life-vault" title="Permanent link">&para;</a></h2>
+<p>A schema is the list of property names, their types, and their allowed values. Write it down in a note (<code>Meta/Schema.md</code>) and keep it current — future you and every template depend on it.</p>
+<h3 id="universal-properties-every-note-type">Universal properties (every note type)<a class="headerlink" href="#universal-properties-every-note-type" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;note type&gt;</span><span class="w">          </span><span class="c1"># required; drives everything</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2026-09-06</span><span class="w">        </span><span class="c1"># date; Templater fills</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">                   </span><span class="c1"># optional labels</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">aliases</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">                </span><span class="c1"># optional</span>
+</span></code></pre></div>
+<p>Do <strong>not</strong> add <code>modified</code> — <code>file.mtime</code> already exists and hand-maintained modified dates are always wrong. Do not add <code>title</code> unless a publishing tool needs it.</p>
+<h3 id="type-catalogue">Type catalogue<a class="headerlink" href="#type-catalogue" title="Permanent link">&para;</a></h3>
+<p>The recommended note types for a whole-life vault, with their extra properties. Every later chapter builds on this list.</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>Extra properties</th>
+<th>Folder (suggested)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>daily</code></td>
+<td><code>date</code> (date), <code>mood</code> (number 1–5), <code>energy</code> (number), <code>sleep_h</code> (number), <code>weight</code> (number, optional), <code>highlights</code> (list)</td>
+<td><code>Journal/Daily</code></td>
+</tr>
+<tr>
+<td><code>weekly</code> / <code>monthly</code> / <code>quarterly</code> / <code>yearly</code></td>
+<td><code>period_start</code>, <code>period_end</code> (date)</td>
+<td><code>Journal/Weekly</code>…</td>
+</tr>
+<tr>
+<td><code>project</code></td>
+<td><code>status</code> (idea/active/on-hold/done/dropped), <code>area</code> (link), <code>start</code>, <code>due</code>, <code>completed</code> (dates), <code>priority</code> (1–3), <code>goal</code> (link)</td>
+<td><code>Projects</code></td>
+</tr>
+<tr>
+<td><code>area</code></td>
+<td><code>review_cadence</code> (weekly/monthly/quarterly), <code>standard</code> (text: what "good" looks like)</td>
+<td><code>Areas</code></td>
+</tr>
+<tr>
+<td><code>goal</code></td>
+<td><code>horizon</code> (year/quarter/life), <code>status</code>, <code>area</code> (link), <code>metric</code> (text), <code>target</code> (number), <code>current</code> (number), <code>due</code></td>
+<td><code>Goals</code></td>
+</tr>
+<tr>
+<td><code>task-note</code> (only for tasks big enough to have a page)</td>
+<td><code>status</code>, <code>project</code> (link), <code>due</code></td>
+<td>inside project folder</td>
+</tr>
+<tr>
+<td><code>person</code></td>
+<td><code>relationship</code> (family/friend/colleague/acquaintance/professional), <code>birthday</code> (date), <code>email</code>, <code>phone</code>, <code>company</code> (link), <code>location</code>, <code>last_contact</code> (date), <code>contact_every</code> (number, days), <code>tags</code></td>
+<td><code>People</code></td>
+</tr>
+<tr>
+<td><code>meeting</code></td>
+<td><code>date</code>, <code>attendees</code> (list of links), <code>project</code> (link), <code>decisions</code> (list), <code>next_meeting</code> (date)</td>
+<td><code>Work/Meetings</code></td>
+</tr>
+<tr>
+<td><code>source</code> (umbrella) with <code>medium</code>: <code>book</code> / <code>article</code> / <code>paper</code> / <code>podcast</code> / <code>video</code> / <code>course</code></td>
+<td><code>author</code> (list of links), <code>url</code>, <code>medium</code>, <code>status</code> (to-read/reading/read/abandoned), <code>rating</code> (1–5), <code>started</code>, <code>finished</code> (dates), <code>pages</code>, <code>isbn</code>/<code>doi</code>, <code>cover</code> (url), <code>topics</code> (list of links)</td>
+<td><code>Sources/&lt;medium&gt;</code></td>
+</tr>
+<tr>
+<td><code>note</code> (permanent/evergreen idea)</td>
+<td><code>status</code> (seedling/budding/evergreen), <code>topics</code> (list of links), <code>sources</code> (list of links)</td>
+<td><code>Notes</code></td>
+</tr>
+<tr>
+<td><code>moc</code></td>
+<td><code>area</code> (link)</td>
+<td><code>Maps</code></td>
+</tr>
+<tr>
+<td><code>recipe</code></td>
+<td><code>cuisine</code>, <code>course</code> (breakfast/main/dessert…), <code>servings</code> (number), <code>prep_min</code>, <code>cook_min</code> (numbers), <code>rating</code>, <code>ingredients</code> (list), <code>last_made</code> (date), <code>tags</code></td>
+<td><code>Life/Recipes</code></td>
+</tr>
+<tr>
+<td><code>workout</code></td>
+<td><code>date</code>, <code>kind</code> (strength/run/bike/swim/yoga…), <code>duration_min</code>, <code>distance_km</code>, <code>calories</code>, <code>rpe</code> (1–10), <code>exercises</code> (in body as table)</td>
+<td><code>Health/Workouts</code></td>
+</tr>
+<tr>
+<td><code>health-event</code></td>
+<td><code>date</code>, <code>kind</code> (symptom/appointment/medication/lab), <code>provider</code> (link), <code>severity</code></td>
+<td><code>Health/Log</code></td>
+</tr>
+<tr>
+<td><code>transaction</code> or <code>expense</code></td>
+<td><code>date</code>, <code>amount</code> (number), <code>currency</code>, <code>category</code>, <code>account</code> (link), <code>merchant</code>, <code>recurring</code> (checkbox)</td>
+<td><code>Finance/Transactions</code> (or a single ledger note with inline table)</td>
+</tr>
+<tr>
+<td><code>subscription</code></td>
+<td><code>cost</code>, <code>billing</code> (monthly/yearly), <code>renews</code> (date), <code>status</code>, <code>cancel_url</code></td>
+<td><code>Finance/Subscriptions</code></td>
+</tr>
+<tr>
+<td><code>asset</code> / <code>item</code></td>
+<td><code>purchased</code> (date), <code>price</code>, <code>warranty_until</code> (date), <code>serial</code>, <code>location</code>, <code>manual</code> (link/url)</td>
+<td><code>Life/Inventory</code></td>
+</tr>
+<tr>
+<td><code>trip</code></td>
+<td><code>destination</code>, <code>start</code>, <code>end</code>, <code>status</code> (idea/planned/booked/done), <code>budget</code>, <code>companions</code> (links)</td>
+<td><code>Life/Travel</code></td>
+</tr>
+<tr>
+<td><code>decision</code></td>
+<td><code>date</code>, <code>status</code> (open/decided/reviewed), <code>options</code> (list), <code>chosen</code> (text), <code>review_on</code> (date), <code>confidence</code> (1–10)</td>
+<td><code>Mind/Decisions</code></td>
+</tr>
+<tr>
+<td><code>habit</code></td>
+<td><code>cadence</code> (daily/weekly), <code>active</code> (checkbox), <code>start</code> (date), <code>why</code> (text)</td>
+<td><code>Life/Habits</code></td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td>none (excluded folder)</td>
+<td><code>Templates</code></td>
+</tr>
+</tbody>
+</table>
+<p>You will not use all of these. Start with <code>daily</code>, <code>project</code>, <code>area</code>, <code>person</code>, <code>source</code>, <code>note</code>, <code>meeting</code>, and add as domains come online.</p>
+<h3 id="controlled-vocabularies">Controlled vocabularies<a class="headerlink" href="#controlled-vocabularies" title="Permanent link">&para;</a></h3>
+<p>For every property whose value is a category, decide the allowed values and write them in the schema note. The property editor's value suggester shows existing values, which nudges consistency, but it does not enforce. Options for enforcement:</p>
+<ul>
+<li><strong>Templates</strong> pre-fill the property with a default so you rarely type it.</li>
+<li><strong>Meta Bind</strong> renders a dropdown (<code>INPUT[inlineSelect(option(active), option(done)):status]</code>) bound to the property.</li>
+<li><strong>Linter</strong> plugin can normalize casing and order of properties on save.</li>
+<li><strong>Bases</strong> views with <code>status != "active" &amp;&amp; status != "done" &amp;&amp; …</code> filter surface typos.</li>
+<li>A periodic <strong>schema audit</strong> query (below).</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>TABLE WITHOUT ID status, length(rows) AS &quot;count&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>FROM &quot;&quot;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>WHERE type = &quot;project&quot;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>GROUP BY status
+</span></code></pre></div>
+<p>Any row with an unexpected <code>status</code> value is a typo to fix.</p>
+<h3 id="naming-properties">Naming properties<a class="headerlink" href="#naming-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>snake_case</code> or <code>kebab-case</code>? Either; Bases and Dataview accept both, but Dataview <em>also</em> auto-generates a sanitized alias (<code>sleep-hours</code> → <code>sleep-hours</code> and <code>sleephours</code>), and Bases requires <code>note["sleep-hours"]</code> bracket syntax for hyphens in some contexts. <strong><code>snake_case</code> avoids all of it.</strong> Lowercase always.</li>
+<li>Singular for single values (<code>author</code>), plural for lists (<code>topics</code>, <code>attendees</code>).</li>
+<li>Dates end in a noun that says what they are: <code>due</code>, <code>start</code>, <code>finished</code>, <code>renews</code>, <code>last_contact</code>. Avoid a bare <code>date</code> except on notes that <em>are</em> a date (daily notes, meetings, transactions).</li>
+<li>Prefer a <code>type</code> property over multiple boolean properties (<code>is_project: true</code>).</li>
+</ul>
+<h3 id="migrating-and-refactoring-metadata">Migrating and refactoring metadata<a class="headerlink" href="#migrating-and-refactoring-metadata" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rename a property everywhere: <strong>Properties view</strong> → right-click → Rename. Or the CLI/scripting. Or a careful <code>sed</code> across the vault while Obsidian is closed.</li>
+<li>Convert tags to a property: search <code>tag:#book</code>, then for each file add <code>type: book</code> — tedious by hand; Templater/QuickAdd macros, the <strong>Metadata Menu</strong> plugin (bulk field editing), or a short Python script over the folder do it in minutes.</li>
+<li>Merge synonyms (<code>status: doing</code> → <code>active</code>): Dataview query to list offenders, fix in Bases table view by editing cells inline (Bases table cells are editable and support copy/paste and undo since 1.10 — select a column of wrong values, paste the right one).</li>
+</ul>
+<h2 id="bases-and-dataview-see-the-same-data">Bases and Dataview see the same data<a class="headerlink" href="#bases-and-dataview-see-the-same-data" title="Permanent link">&para;</a></h2>
+<p>Both read frontmatter. Differences that matter for schema design:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Bases</th>
+<th>Dataview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reads properties</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Reads inline fields <code>key:: value</code></td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Reads tasks</td>
+<td>no (only via plugins' views)</td>
+<td>yes (<code>TASK</code> queries)</td>
+</tr>
+<tr>
+<td>Edits values in place</td>
+<td>yes (table cells)</td>
+<td>no (read-only; DataviewJS can write via API)</td>
+</tr>
+<tr>
+<td>Lists inside properties</td>
+<td><code>list.contains()</code>, <code>map</code>, <code>filter</code></td>
+<td><code>contains()</code>, <code>map</code>, <code>filter</code></td>
+</tr>
+<tr>
+<td>Links in properties</td>
+<td>Link objects; <code>author == this</code>, <code>authors.contains(this)</code></td>
+<td>Link objects; <code>contains(author, this.file.link)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Design for the intersection: typed properties, links quoted, lists for multi-values, nothing important in inline fields.</p>
+<h2 id="metadata-hygiene-routine">Metadata hygiene routine<a class="headerlink" href="#metadata-hygiene-routine" title="Permanent link">&para;</a></h2>
+<p>Monthly, 15 minutes:</p>
+<ol>
+<li>Open the <strong>Properties view</strong>; scan for near-duplicates (<code>Status</code> vs <code>status</code>, <code>tag</code> vs <code>tags</code>); rename or delete.</li>
+<li>Run the schema audit query per major type; fix stray values inline in a Base table.</li>
+<li>Check for notes missing <code>type</code> (<code>WHERE !type</code> in Dataview, or a Base filter <code>type.isEmpty()</code>), and fix or archive.</li>
+<li>Check the Tags view for tags used once — convert to a link, a property value, or delete.</li>
+</ol>
+<h2 id="key-takeaways">Key takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Properties are typed, vault-wide by name, and the substrate for Bases, Dataview, templates and dashboards; keep the YAML valid (quote links and colons).</li>
+<li>Tags are booleans for adjectives and workflow states; links are for nouns; properties are for anything you sort or filter; folders are for the machine.</li>
+<li>Write down a schema — a <code>type</code> property on every note plus a small, controlled set of typed properties per type — and enforce it with templates, Bases views and a monthly audit.</li>
+<li>Use <code>snake_case</code>, plural names for lists, and meaningful date names.</li>
+<li>Design for the intersection of Bases and Dataview: properties, not inline fields.</li>
+</ul>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p><a href="../06-search/">Chapter 6: Search Mastery →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../04-links-and-graph/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Links, Backlinks, Graph and Canvas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Links, Backlinks, Graph and Canvas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../06-search/" class="md-footer__link md-footer__link--next" aria-label="Next: Search Mastery">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Search Mastery
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Written 2026. Content may be freely shared with attribution.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/gorg667/obsidian-guide" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -2,10 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gorg667.github.io/obsidian-guide/</loc>
-         <lastmod>2026-09-06</lastmod>
+         <lastmod>2026-09-07</lastmod>
     </url>
     <url>
          <loc>https://gorg667.github.io/obsidian-guide/01-philosophy/</loc>
-         <lastmod>2026-09-06</lastmod>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/02-setup-and-interface/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/03-markdown-and-editing/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/04-links-and-graph/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/05-properties-tags-and-metadata/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/06-search/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/07-pkm-methodologies/</loc>
+         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gorg667.github.io/obsidian-guide/08-vault-architecture/</loc>
+         <lastmod>2026-09-07</lastmod>
     </url>
 </urlset>

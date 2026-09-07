@@ -1,0 +1,1908 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The most detailed, comprehensive guide to mastering Obsidian and building a life operating system with it.">
+      
+      
+      
+        <link rel="canonical" href="https://gorg667.github.io/obsidian-guide/02-setup-and-interface/">
+      
+      
+        <link rel="prev" href="../01-philosophy/">
+      
+      
+        <link rel="next" href="../03-markdown-and-editing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Setup, Settings and Interface - The Complete Obsidian Mastery Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup-settings-and-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-header__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Complete Obsidian Mastery Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup, Settings and Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-philosophy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I — Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../07-pkm-methodologies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II — Systems & Methodology
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-nav__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Complete Obsidian Mastery Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I — Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I — Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy and Mental Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup, Settings and Interface
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup, Settings and Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-installer-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation and installer versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-put-the-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to put the vault
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-level-decisions-before-you-write" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vault-level decisions before you write
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complete-settings-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The complete settings audit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The complete settings audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-and-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files and links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hotkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotkeys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync / Publish
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-anatomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface anatomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-you-should-do-from-the-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation you should do from the keyboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces-and-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspaces and layouts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-vaults-strategy-if-you-really-need-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple vaults strategy (if you really need it)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-hour-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First-hour checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-markdown-and-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown and Editing Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-links-and-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Links, Backlinks, Graph and Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-properties-tags-and-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Properties, Tags and Metadata Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II — Systems & Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II — Systems & Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-pkm-methodologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PKM Methodologies Compared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-vault-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Architecture — the Reference Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-installer-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation and installer versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-put-the-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to put the vault
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-level-decisions-before-you-write" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vault-level decisions before you write
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complete-settings-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The complete settings audit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The complete settings audit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-and-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files and links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hotkeys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hotkeys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Community plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync / Publish
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-anatomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface anatomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-you-should-do-from-the-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation you should do from the keyboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces-and-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workspaces and layouts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-vaults-strategy-if-you-really-need-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple vaults strategy (if you really need it)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-hour-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First-hour checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01-philosophy/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part I — Foundations
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/gorg667/obsidian-guide/edit/main/docs/02-setup-and-interface.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="setup-settings-and-interface">Setup, Settings and Interface<a class="headerlink" href="#setup-settings-and-interface" title="Permanent link">&para;</a></h1>
+<p>A vault configured thoughtfully in the first hour saves hundreds of small frustrations later. This chapter is a complete audit: every setting that materially affects how you work, what to set it to and why, plus the interface anatomy and keyboard-first habits that separate fluent users from clickers.</p>
+<h2 id="installation-and-installer-versions">Installation and installer versions<a class="headerlink" href="#installation-and-installer-versions" title="Permanent link">&para;</a></h2>
+<p>Obsidian has two version numbers and confusing them causes real problems.</p>
+<ul>
+<li><strong>App version</strong> (e.g. 1.13.4) — the JavaScript application. Updates automatically in-app on desktop; via the store on mobile.</li>
+<li><strong>Installer version</strong> — the Electron shell (Chromium + Node) the app runs in. It only updates when you <strong>download and reinstall from obsidian.md</strong>. Check it under <strong>Settings → General → About</strong> ("Installer version").</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Reinstall the installer at least once a year</p>
+<p>Features like the Obsidian CLI require installer 1.12.7+, Bases performance improved with newer Electron builds, and several rendering bugs are installer-level. Reinstalling does not touch your vault. On Windows use the same edition (system vs. per-user) you originally installed to avoid two copies.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Recommended install</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>Official installer from obsidian.md</td>
+<td>winget (<code>winget install Obsidian.Obsidian</code>) also works and tracks installer versions.</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>Official DMG or <code>brew install --cask obsidian</code></td>
+<td>Universal build; Apple Silicon native.</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>AppImage (most portable), Flatpak, Snap, or <code>.deb</code></td>
+<td>Flatpak and Snap sandbox file access; the CLI and some sync tools work best with AppImage or <code>.deb</code>. If using Flatpak, grant filesystem access with Flatseal to your vault folder.</td>
+</tr>
+<tr>
+<td>iOS/iPadOS</td>
+<td>App Store</td>
+<td>Vault location: "On My iPhone/Obsidian" (local) or iCloud Drive. See <a href="26-sync-backup-security.md">Sync</a>.</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>Play Store, F-Droid, or GitHub APK</td>
+<td>Grant "All files access" for vaults outside app storage.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="where-to-put-the-vault">Where to put the vault<a class="headerlink" href="#where-to-put-the-vault" title="Permanent link">&para;</a></h2>
+<p>Decide this once. Moving later is possible but annoying.</p>
+<ul>
+<li><strong>Local disk, non-synced folder</strong> — fastest, safest for plugins, zero conflicts. Use if you sync with Obsidian Sync, Git, or Remotely Save (they handle sync themselves).</li>
+<li><strong>iCloud Drive / OneDrive / Dropbox / Google Drive folder</strong> — works on desktop; on mobile only iCloud is natively supported by Obsidian (iOS). Risks: "files on demand" placeholders (OneDrive) break indexing; conflicts create duplicate files; <code>.obsidian/</code> config churn triggers constant re-upload. If you must, exclude nothing and turn off "files on demand" for the vault folder.</li>
+<li><strong>Syncthing folder</strong> — excellent on desktop and Android; not available on iOS.</li>
+<li><strong>Network drive / NAS</strong> — avoid. Latency makes the editor sluggish and file watchers unreliable. Obsidian 1.13 warns when loading HTML resources from network paths for the same reason.</li>
+</ul>
+<p>Chapter 26 has the full sync matrix.</p>
+<h2 id="vault-level-decisions-before-you-write">Vault-level decisions before you write<a class="headerlink" href="#vault-level-decisions-before-you-write" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>One vault or several?</strong> One, unless you have a hard reason (Chapter 1, principle 5). You <em>can</em> keep a scratch vault for experimenting with plugins.</li>
+<li><strong>Attachment folder.</strong> Set <strong>Settings → Files and links → Default location for new attachments</strong> to <em>In the folder specified below</em> → <code>Attachments</code> (or <code>_attachments</code>, <code>zz-attachments</code> to sort last). Never leave it as "vault root" or "same folder as current file" unless you like clutter.</li>
+<li><strong>Link format.</strong> <em>Wikilinks</em> (<code>[[Note]]</code>) are the Obsidian default, faster to type, and every plugin understands them. <em>Markdown links</em> (<code>[Note](Note.md)</code>) are more portable to other tools and required by some publishing pipelines. For the path style, <strong>Shortest path when possible</strong> produces clean <code>[[Note]]</code> links but is only safe if you keep filenames unique across the vault; <strong>Absolute path in vault</strong> produces <code>[[Folder/Note]]</code> and is unambiguous but noisier; <strong>Relative path to file</strong> breaks when notes move. Recommendation for a whole-life vault: Wikilinks on, unique filenames enforced by convention, shortest path.</li>
+<li><strong>New note location.</strong> <em>Same folder as current file</em> is the least surprising once you have a folder skeleton; combined with an <code>Inbox</code> folder as your default landing zone for quick capture.</li>
+<li><strong>Naming convention.</strong> Decide capitalisation (Title Case vs sentence case) and whether dates are <code>YYYY-MM-DD</code>. Decide now; consistency matters more than the choice.</li>
+</ol>
+<h2 id="the-complete-settings-audit">The complete settings audit<a class="headerlink" href="#the-complete-settings-audit" title="Permanent link">&para;</a></h2>
+<p>Settings are searchable since 1.13 (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-comma">,</kbd></span> then type). Below, every setting that matters, grouped as Obsidian groups them. Defaults are fine where a setting is not listed.</p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatic updates</td>
+<td>On</td>
+<td>Security and Bases/CLI improvements ship often.</td>
+</tr>
+<tr>
+<td>Command line interface</td>
+<td>On (desktop)</td>
+<td>Enables <code>obsidian</code> CLI — see Chapter 29. Follow the prompt to register PATH.</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Your choice</td>
+<td>Affects UI only, not your notes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default editing mode</td>
+<td>Live Preview</td>
+<td>WYSIWYG-ish while still Markdown. Switch to Source with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span> (toggle) when you need to see raw syntax.</td>
+</tr>
+<tr>
+<td>Default view for new tabs</td>
+<td>Editing view</td>
+<td>Reading view is for consumption; you are mostly writing.</td>
+</tr>
+<tr>
+<td>Show line numbers</td>
+<td>Off (on for code-heavy notes via <code>cssclasses</code>)</td>
+<td>Noise for prose.</td>
+</tr>
+<tr>
+<td>Readable line length</td>
+<td>On</td>
+<td>~700px measure; disable per note with a CSS class if you need wide tables.</td>
+</tr>
+<tr>
+<td>Strict line breaks</td>
+<td>Off</td>
+<td>With off, a single newline renders as a line break (like most note apps). With on, you need two spaces or a blank line — stricter CommonMark. Off is friendlier; on is more portable. Pick and never change (it changes how existing notes render).</td>
+</tr>
+<tr>
+<td>Properties in document</td>
+<td>Visible</td>
+<td>Shows the typed property editor. "Source" shows raw YAML; "Hidden" hides it.</td>
+</tr>
+<tr>
+<td>Show indentation guides</td>
+<td>On</td>
+<td>Helps with nested lists and tasks.</td>
+</tr>
+<tr>
+<td>Fold heading / Fold indent</td>
+<td>On</td>
+<td>You will use folding constantly in long notes.</td>
+</tr>
+<tr>
+<td>Spellcheck</td>
+<td>On; add languages</td>
+<td>Right-click → Add to dictionary for your jargon.</td>
+</tr>
+<tr>
+<td>Auto pair brackets / Markdown syntax</td>
+<td>On</td>
+<td>Typing <code>[[</code> yields <code>[[]]</code>.</td>
+</tr>
+<tr>
+<td>Smart indent lists</td>
+<td>On</td>
+<td>Tab/Shift-Tab indent list items.</td>
+</tr>
+<tr>
+<td>Vim key bindings</td>
+<td>Off unless you are a Vim user</td>
+<td>If you are, it is remarkably complete (see Chapter 3).</td>
+</tr>
+<tr>
+<td>Auto convert HTML</td>
+<td>On</td>
+<td>Pasting from the web becomes Markdown.</td>
+</tr>
+<tr>
+<td>Indent using tabs / Tab size</td>
+<td>Spaces, 4 (or tabs)</td>
+<td>Some plugins (Tasks, Dataview) were historically picky about mixed indentation. Consistency is what matters.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="files-and-links">Files and links<a class="headerlink" href="#files-and-links" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirm file deletion</td>
+<td>On</td>
+<td>Your trash is one accidental <span class="keys"><kbd class="key-delete">Del</kbd></span> away.</td>
+</tr>
+<tr>
+<td>Deleted files</td>
+<td>Move to Obsidian trash (<code>.trash</code> folder)</td>
+<td>Recoverable within the vault; system trash is the alternative. Chapter 32 covers File Recovery.</td>
+</tr>
+<tr>
+<td>Always update internal links</td>
+<td>On</td>
+<td>The reason renaming is safe.</td>
+</tr>
+<tr>
+<td>Automatically delete attachments</td>
+<td>Ask every time (1.12+)</td>
+<td>When you delete a note, Obsidian offers to delete attachments only that note used.</td>
+</tr>
+<tr>
+<td>Default location for new notes</td>
+<td>Same folder as current file, <em>or</em> a fixed <code>Inbox</code></td>
+<td>See above.</td>
+</tr>
+<tr>
+<td>New link format</td>
+<td>Shortest path when possible (unique names)</td>
+<td>See above.</td>
+</tr>
+<tr>
+<td>Use Wikilinks</td>
+<td>On</td>
+<td>Toggle off only for portability requirements.</td>
+</tr>
+<tr>
+<td>Detect all file extensions</td>
+<td>Off (on temporarily to find stray files)</td>
+<td>Otherwise your explorer shows <code>.DS_Store</code> and friends.</td>
+</tr>
+<tr>
+<td>Default location for new attachments</td>
+<td>In the folder specified below → <code>Attachments</code></td>
+<td>See above.</td>
+</tr>
+<tr>
+<td>Excluded files</td>
+<td>Add <code>Templates/</code>, <code>Attachments/</code>, <code>Archive/</code> if noisy</td>
+<td>Excluded files are dimmed in search/suggestions/graph but still linkable and still indexed. Use it liberally for templates so <code>[[</code> suggestions are not polluted.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appearance">Appearance<a class="headerlink" href="#appearance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base color scheme</td>
+<td>Adapt to system</td>
+<td>Toggle command exists (1.10 replaced the separate light/dark commands with a single <strong>Toggle light/dark mode</strong>).</td>
+</tr>
+<tr>
+<td>Accent color</td>
+<td>Your call</td>
+<td>Also used by links and selection.</td>
+</tr>
+<tr>
+<td>Font size</td>
+<td>16 (desktop)</td>
+<td>Zoom with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span> as needed.</td>
+</tr>
+<tr>
+<td>Interface / text / monospace font</td>
+<td>System UI; a good reading font (e.g. Inter, iA Writer Duo, Source Serif); JetBrains Mono / Fira Code</td>
+<td>Fonts must be installed on each device.</td>
+</tr>
+<tr>
+<td>Quick font size adjustment</td>
+<td>On</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + scroll.</td>
+</tr>
+<tr>
+<td>Show inline title</td>
+<td>On</td>
+<td>The filename rendered as an H1 at the top; means you do not put <code># Title</code> in the body.</td>
+</tr>
+<tr>
+<td>Show tab title bar</td>
+<td>On (desktop)</td>
+<td>Off saves vertical space, but you lose the breadcrumb.</td>
+</tr>
+<tr>
+<td>Ribbon</td>
+<td>Reorder / hide items you never click</td>
+<td>Right-click the ribbon → Configure.</td>
+</tr>
+<tr>
+<td>Native menus (macOS)</td>
+<td>Off</td>
+<td>Obsidian's own menus are more consistent across platforms.</td>
+</tr>
+<tr>
+<td>Window frame</td>
+<td>Hidden (native title bar off)</td>
+<td>Less chrome.</td>
+</tr>
+<tr>
+<td>Zoom level</td>
+<td>100%</td>
+<td></td>
+</tr>
+<tr>
+<td>Themes / CSS snippets</td>
+<td>See Chapter 28</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hotkeys">Hotkeys<a class="headerlink" href="#hotkeys" title="Permanent link">&para;</a></h3>
+<p>Chapter 37 has the complete default list. The philosophy: leave defaults alone unless they conflict, and add hotkeys for the ~15 commands you use hourly. Non-negotiable additions for most people:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Suggested hotkey</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle left / right sidebar</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span> (or click)</td>
+<td>Focus mode on demand.</td>
+</tr>
+<tr>
+<td>Open today's daily note</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-d">D</kbd></span></td>
+<td>Your home base.</td>
+</tr>
+<tr>
+<td>Insert template</td>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
+<td>Constantly used until Templater takes over.</td>
+</tr>
+<tr>
+<td>Toggle reading view</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span> (default)</td>
+<td></td>
+</tr>
+<tr>
+<td>Focus on last note / Focus on tab group</td>
+<td></td>
+<td>Useful with split panes.</td>
+</tr>
+<tr>
+<td>Move current file to another folder</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span></td>
+<td>Processing your inbox.</td>
+</tr>
+<tr>
+<td>Add file property</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-semicolon">;</kbd></span></td>
+<td>Metadata without leaving the keyboard.</td>
+</tr>
+<tr>
+<td>Toggle bullet / checkbox</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> (default toggles checkbox)</td>
+<td></td>
+</tr>
+<tr>
+<td>Navigate back / forward</td>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> / <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></td>
+<td>Web-browser habits.</td>
+</tr>
+<tr>
+<td>Search in all files</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span></td>
+<td></td>
+</tr>
+<tr>
+<td>Open command palette</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td></td>
+</tr>
+<tr>
+<td>Open quick switcher</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span></td>
+<td></td>
+</tr>
+<tr>
+<td>Toggle Bases view / Open Bases</td>
+<td></td>
+<td>Once you build dashboards.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Hotkeys are stored in <code>.obsidian/hotkeys.json</code></p>
+<p>Sync that file (Obsidian Sync can sync hotkeys; Git syncs everything) so your muscle memory survives device changes.</p>
+</div>
+<h3 id="core-plugins">Core plugins<a class="headerlink" href="#core-plugins" title="Permanent link">&para;</a></h3>
+<p>Turn on: File explorer, Search, Quick switcher, Graph view, Backlinks, Outgoing links, Canvas, Daily notes, Templates, Note composer, Command palette, Bookmarks, Outline, Word count, File recovery, Page preview, Properties view, Tags view, Bases, Slash commands (optional), Unique note creator (if you use Zettelkasten IDs), Workspaces (once you have layouts), Web viewer (if you want in-app browsing), Random note (for serendipitous review), Importer (when migrating), Footnotes view (if you write academically), Sync/Publish (if subscribed), Slides (rarely). Chapter 9 details each.</p>
+<h3 id="community-plugins">Community plugins<a class="headerlink" href="#community-plugins" title="Permanent link">&para;</a></h3>
+<p>Turn off <strong>Restricted mode</strong>. Since 1.13 you can exit Restricted mode <em>without</em> re-enabling plugins, which is useful for debugging. Install nothing yet; Chapter 14 curates. The <strong>Check for updates</strong> button is in this tab — do it weekly.</p>
+<h3 id="sync-publish">Sync / Publish<a class="headerlink" href="#sync-publish" title="Permanent link">&para;</a></h3>
+<p>See Chapters 26 and 31. Notable 1.13 behaviour: Sync warns before syncing plugins between devices (because plugin data can be device-specific), and the status-bar icon no longer spins to save battery.</p>
+<h2 id="interface-anatomy">Interface anatomy<a class="headerlink" href="#interface-anatomy" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Window
+      direction LR
+      R[Ribbon&lt;br/&gt;vertical icon bar] --- LS[Left sidebar&lt;br/&gt;File explorer · Search · Bookmarks · Tags]
+      LS --- M[Main area&lt;br/&gt;Tab groups · splits · stacked tabs]
+      M --- RS[Right sidebar&lt;br/&gt;Backlinks · Outgoing links · Outline · Properties · Calendar · local Graph]
+    end
+    SB[Status bar: word count · sync · plugins]</code></pre>
+<p><strong>Ribbon.</strong> Vertical strip of icons on the far left. Every core and community plugin can add one. Right-click → hide the ones you never click; the actions remain in the command palette.</p>
+<p><strong>Sidebars.</strong> Both hold <em>tabs of views</em>. Drag any view between sidebars or into the main area (a Backlinks view in the main area is a legitimate way to review connections). Collapse with the small arrows or hotkeys. Pin a sidebar tab to keep it visible.</p>
+<p><strong>Main area.</strong> Tabs, like a browser. Split any tab horizontally/vertically (right-click the tab → Split, or drag it to an edge). A <em>tab group</em> is a set of tabs sharing a pane. <strong>Stacked tabs</strong> (right-click tab header → Stack tabs) turns a group into Andy Matuschak-style sliding cards — outstanding for research where you open six notes from one MOC.</p>
+<p><strong>Status bar.</strong> Bottom right: word/character count, backlink count, sync status, plugin indicators. Click items for menus. Hide with CSS if you prefer minimal.</p>
+<p><strong>Tab title bar / inline title.</strong> The breadcrumb (folder › note) and the note's H1-like title. Click the breadcrumb to navigate the folder; click the inline title to rename.</p>
+<p><strong>Settings window.</strong> Since 1.13 opens in a separate window with search and keyboard navigation (arrows to move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> to open, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f">F</kbd></span> to focus search). Disable "Open settings in new window" under Interface if you prefer the modal.</p>
+<p><strong>Pop-out windows.</strong> Drag a tab out of the app to make it a standalone window (desktop). Useful for a reference note on a second monitor.</p>
+<h2 id="navigation-you-should-do-from-the-keyboard">Navigation you should do from the keyboard<a class="headerlink" href="#navigation-you-should-do-from-the-keyboard" title="Permanent link">&para;</a></h2>
+<p>The fluent-user baseline. Everything else is optional; these are not.</p>
+<ul>
+<li><strong>Command palette</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span> — type any command. Pin favourites (Settings → Command palette) to the top. Also try <code>&gt;</code> prefix in Quick switcher.</li>
+<li><strong>Quick switcher</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> — fuzzy-find by filename. Type a new name and <span class="keys"><kbd class="key-enter">Enter</kbd></span> to create. <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> creates even if a fuzzy match exists. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> opens in a new tab. Since 1.12 results can be dragged.</li>
+<li><strong>Search</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span> — full-text with operators (Chapter 6). <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f">F</kbd></span> searches within the current note.</li>
+<li><strong>Follow link under cursor</strong> <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> (or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> to open in a new tab). Hover with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> for a page preview.</li>
+<li><strong>Back / forward</strong> <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> / <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-bracket-left">[</kbd></span> / <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-bracket-right">]</kbd></span> on mac).</li>
+<li><strong>Go to next/previous tab</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>; go to tab N <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-1">1</kbd></span> … <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-9">9</kbd></span>.</li>
+<li><strong>Close tab</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span>; <strong>reopen closed tab</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span>.</li>
+<li><strong>Toggle sidebars</strong> — assign hotkeys.</li>
+<li><strong>Reveal current file in navigation</strong> — assign; essential in big trees.</li>
+<li><strong>Fold/unfold</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span> at heading; <strong>Fold all / Unfold all</strong> commands.</li>
+<li><strong>Focus on editor</strong> <span class="keys"><kbd class="key-escape">Esc</kbd></span> from most panes.</li>
+</ul>
+<h2 id="workspaces-and-layouts">Workspaces and layouts<a class="headerlink" href="#workspaces-and-layouts" title="Permanent link">&para;</a></h2>
+<p>The <strong>Workspaces</strong> core plugin saves the entire layout (which panes, which files, which sidebar tabs) under a name and restores it in one command. Build three or four:</p>
+<ul>
+<li><strong>Writing</strong> — single pane, sidebars collapsed, Outline in right sidebar.</li>
+<li><strong>Planning</strong> — daily note left, task dashboard right, Calendar in sidebar.</li>
+<li><strong>Research</strong> — stacked tabs in main, Backlinks + local Graph on the right.</li>
+<li><strong>Review</strong> — weekly note, project Base, Habit tracker.</li>
+</ul>
+<p>Save with <em>Workspaces: Save layout</em>, load with <em>Workspaces: Load layout</em>. The Obsidian CLI can load them (<code>obsidian workspace:load name=Planning</code>), which means a shell alias or a Raycast/Alfred/AutoHotkey script can put you in a mode instantly. Chapter 29 shows this.</p>
+<div class="admonition note">
+<p class="admonition-title">Workspaces + mobile</p>
+<p>Mobile has its own layout; workspaces are per-device. The <strong>Workspaces Plus</strong> community plugin adds a switcher and per-workspace settings on desktop.</p>
+</div>
+<h2 id="multiple-vaults-strategy-if-you-really-need-it">Multiple vaults strategy (if you really need it)<a class="headerlink" href="#multiple-vaults-strategy-if-you-really-need-it" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Vaults are completely isolated: separate plugins, settings, index. Cross-vault links use <code>obsidian://open?vault=Other&amp;file=Note</code> URIs (they work but feel foreign).</li>
+<li>Share configuration between vaults with a symlink of <code>.obsidian/</code> subfolders (snippets, themes) — fragile with sync; do it only on a single machine.</li>
+<li><strong>Change vault…</strong> (renamed <em>Manage vaults</em> in 1.12) lists vaults; the <strong>Open vault…</strong> command (1.12) opens another vault while keeping the current one open. The CLI accepts <code>vault=Name</code> as the first parameter.</li>
+</ul>
+<h2 id="first-hour-checklist">First-hour checklist<a class="headerlink" href="#first-hour-checklist" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Installer updated; app updated.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vault created in a sensible location; sync approach chosen (Chapter 26).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Attachments folder set; excluded files set; link format decided.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Editor: Live Preview, readable line length, folding, spellcheck, indentation guides.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Appearance: theme (Chapter 28), inline title on, fonts.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Core plugins enabled per list above; Restricted mode off.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Hotkeys added for daily note, insert template, sidebars, move file, add property.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Folder skeleton created (Chapter 8) with <code>Inbox</code>, <code>Templates</code>, <code>Attachments</code> at minimum.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Templates folder set in <strong>Templates</strong> core plugin settings; Daily notes folder + format set.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>.obsidian/</code> backed up (Chapter 26).</li>
+</ul>
+<h2 id="key-takeaways">Key takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>App version and installer version are different; reinstall the installer periodically.</li>
+<li>Put the vault on a local disk unless your sync method requires a synced folder; avoid network drives.</li>
+<li>Decide attachments folder, link format, new-note location, and naming convention in the first hour.</li>
+<li>Learn the ten keyboard navigation commands; they are the difference between using Obsidian and living in it.</li>
+<li>Use Workspaces (and later the CLI) to switch between purpose-built layouts.</li>
+</ul>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p><a href="../03-markdown-and-editing/">Chapter 3: Markdown and Editing Mastery →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-philosophy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Philosophy and Mental Model">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Philosophy and Mental Model
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-markdown-and-editing/" class="md-footer__link md-footer__link--next" aria-label="Next: Markdown and Editing Mastery">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Markdown and Editing Mastery
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Written 2026. Content may be freely shared with attribution.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/gorg667/obsidian-guide" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
