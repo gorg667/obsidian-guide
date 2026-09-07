@@ -92,7 +92,7 @@ Part I — Foundations
 - [x] 04-links-and-graph.md — wikilinks vs markdown links, aliases, heading/block links,
       embeds, backlinks, outgoing links, unlinked mentions, link maintenance, Graph view
       (filters, groups, colors, local graph), Canvas deep dive + JSON Canvas
-- [ ] 05-properties-tags-and-metadata.md — properties (all types), YAML gotchas, tags vs
+- [x] 05-properties-tags-and-metadata.md — properties (all types), YAML gotchas, tags vs
       properties vs folders vs links (decision framework), nested tags, aliases, cssclasses,
       Global Properties view, schema design for a life vault
 - [ ] 06-search.md — full search operator reference, regex, embedded search, saved
