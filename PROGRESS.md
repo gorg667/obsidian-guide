@@ -190,7 +190,7 @@ Part VI — Reference
 - [x] 36-templates-library.md — all templates in one place, copy-paste ready
 - [x] 37-cheatsheets.md — hotkeys, Markdown, search operators, Dataview, Bases
       functions, Templater, Tasks, CLI, URI
-- [ ] 38-resources-and-glossary.md — glossary, curated resources, communities
+- [x] 38-resources-and-glossary.md — glossary, curated resources, communities
 
 ## Conventions for writing chapters
 
