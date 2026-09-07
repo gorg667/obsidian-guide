@@ -117,7 +117,7 @@ Part III — Core plugins mastery
       bases, 25+ ready-made bases for life domains, Bases vs Dataview, migration
 - [x] 11-templates-and-templater.md — core Templates → Templater: syntax, tp.* modules,
       user scripts, dynamic commands, folder templates, prompts/suggesters, 30+ templates
-- [ ] 12-dataview.md — DQL (TABLE/LIST/TASK/CALENDAR, FROM/WHERE/SORT/GROUP BY/FLATTEN),
+- [x] 12-dataview.md — DQL (TABLE/LIST/TASK/CALENDAR, FROM/WHERE/SORT/GROUP BY/FLATTEN),
       inline fields, functions, DataviewJS, dv.* API, performance, 50+ queries for life
       domains, common errors
 - [ ] 13-tasks-and-time.md — Tasks plugin (syntax, emoji signifiers, queries, recurrence,
