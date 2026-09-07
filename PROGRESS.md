@@ -181,7 +181,7 @@ Part V — Power user
       common error patterns, debugging (CLI dev tools), safe mode
 - [x] 33-migration.md — from Notion, Evernote, Roam, Logseq, Apple Notes, OneNote,
       Google Keep, Bear, Craft, Airtable; importer; cleanup afterwards; exporting out
-- [ ] 34-plugin-development-primer.md — enough to write your own plugin: scaffold,
+- [x] 34-plugin-development-primer.md — enough to write your own plugin: scaffold,
       API basics, Bases view API, CLI dev commands, publishing to the directory
 
 Part VI — Reference
