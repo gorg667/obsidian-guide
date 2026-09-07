@@ -115,7 +115,7 @@ Part III — Core plugins mastery
 - [x] 10-bases.md — Bases deep dive: .base format, views (table/cards/list/map), filters,
       formulas, functions reference (condensed), summaries, groupBy, `this`, embedded
       bases, 25+ ready-made bases for life domains, Bases vs Dataview, migration
-- [ ] 11-templates-and-templater.md — core Templates → Templater: syntax, tp.* modules,
+- [x] 11-templates-and-templater.md — core Templates → Templater: syntax, tp.* modules,
       user scripts, dynamic commands, folder templates, prompts/suggesters, 30+ templates
 - [ ] 12-dataview.md — DQL (TABLE/LIST/TASK/CALENDAR, FROM/WHERE/SORT/GROUP BY/FLATTEN),
       inline fields, functions, DataviewJS, dv.* API, performance, 50+ queries for life
