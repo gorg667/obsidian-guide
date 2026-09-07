@@ -1,0 +1,2794 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The most detailed, comprehensive guide to mastering Obsidian and building a life operating system with it.">
+      
+      
+      
+        <link rel="canonical" href="https://gorg667.github.io/obsidian-guide/12-dataview/">
+      
+      
+        <link rel="prev" href="../11-templates-and-templater/">
+      
+      
+        <link rel="next" href="../13-tasks-and-time/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Dataview — Queries and Scripting - The Complete Obsidian Mastery Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dataview-queries-and-scripting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-header__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Complete Obsidian Mastery Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dataview — Queries and Scripting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-philosophy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part I — Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../07-pkm-methodologies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part II — Systems & Methodology
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../09-core-plugins/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part III — Core Tools Mastery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../15-daily-notes-and-journaling/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part IV — Obsidian for Everything in Life
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Complete Obsidian Mastery Guide" class="md-nav__button md-logo" aria-label="The Complete Obsidian Mastery Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Complete Obsidian Mastery Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gorg667/obsidian-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gorg667/obsidian-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part I — Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part I — Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy and Mental Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-setup-and-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup, Settings and Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-markdown-and-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown and Editing Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-links-and-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Links, Backlinks, Graph and Canvas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-properties-tags-and-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Properties, Tags and Metadata Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Mastery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part II — Systems & Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part II — Systems & Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-pkm-methodologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PKM Methodologies Compared
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-vault-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vault Architecture — the Reference Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part III — Core Tools Mastery
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part III — Core Tools Mastery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-core-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Plugins — Every One, Mastered
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases — the Native Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-templates-and-templater/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates and Templater
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataview — Queries and Scripting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataview — Queries and Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dql-the-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DQL — the query language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DQL — the query language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FROM sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHERE and expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions-the-ones-you-will-actually-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions (the ones you will actually use)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-by-and-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GROUP BY and rows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inline queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataviewjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DataviewJS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DataviewJS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reusable-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusable views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-library-for-a-whole-life-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query library for a whole-life vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query library for a whole-life vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-note-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily note widgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects &amp; goals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        People
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading &amp; learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health &amp; habits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moc-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOC helpers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataview-bases-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataview ↔ Bases coexistence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-tasks-and-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks, Time and Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-essential-community-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Essential Community Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part IV — Obsidian for Everything in Life
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part IV — Obsidian for Everything in Life
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-daily-notes-and-journaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Notes and Journaling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-tasks-projects-goals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks, Projects and Goals — the Action System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-knowledge-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge and Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-academic-research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-work-and-career/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work and Career
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fitness-food/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health, Fitness and Food
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-home-life-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home and Life Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-relationships-and-people/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relationships and People
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-creativity-writing-media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creativity, Writing and Media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-mind-and-self/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mind and Self
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dql-the-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DQL — the query language
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DQL — the query language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FROM sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHERE and expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions-the-ones-you-will-actually-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions (the ones you will actually use)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-by-and-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GROUP BY and rows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inline queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataviewjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DataviewJS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DataviewJS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reusable-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reusable views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-library-for-a-whole-life-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query library for a whole-life vault
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query library for a whole-life vault">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-note-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily note widgets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekly-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projects-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects &amp; goals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        People
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading &amp; learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health &amp; habits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moc-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOC helpers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataview-bases-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataview ↔ Bases coexistence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../09-core-plugins/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Part III — Core Tools Mastery
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/gorg667/obsidian-guide/edit/main/docs/12-dataview.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="dataview-queries-and-scripting">Dataview — Queries and Scripting<a class="headerlink" href="#dataview-queries-and-scripting" title="Permanent link">&para;</a></h1>
+<p>Dataview (community, by blacksmithgu) was for years the reason people chose Obsidian over everything else: SQL-like queries over your notes' metadata, rendered live as tables, lists, task lists, and calendars, plus a JavaScript API for anything the query language cannot express. Bases now covers the common cases better (Chapter 10), but Dataview remains essential for <strong>inline fields</strong>, <strong>task queries with custom logic</strong>, <strong>cross-note joins</strong>, <strong>charts</strong>, and <strong>arbitrary computation</strong>. Dataview is in maintenance mode — stable, widely used, not gaining features — which is fine: it does what it does. This chapter is the complete practical reference plus 40+ queries for a whole-life vault.</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>Install <strong>Dataview</strong>. Settings that matter:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable JavaScript queries</td>
+<td>On (you will need DataviewJS)</td>
+</tr>
+<tr>
+<td>Enable inline JavaScript queries</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Enable inline field highlighting</td>
+<td>On</td>
+</tr>
+<tr>
+<td>Date format / Date + time format</td>
+<td><code>yyyy-MM-dd</code>, <code>yyyy-MM-dd HH:mm</code> (Luxon tokens — lowercase <code>yyyy</code>, unlike Moment)</td>
+</tr>
+<tr>
+<td>Automatic view refreshing</td>
+<td>On; refresh interval 2500 ms</td>
+</tr>
+<tr>
+<td>Inline query prefix</td>
+<td><code>=</code> (default)</td>
+</tr>
+<tr>
+<td>Recursive sub-task completion</td>
+<td>On if you use nested tasks</td>
+</tr>
+<tr>
+<td>Task completion tracking</td>
+<td>On + <code>completion</code> text if you want <code>[completion:: date]</code> stamped when checking boxes in Dataview views</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-model">Data model<a class="headerlink" href="#data-model" title="Permanent link">&para;</a></h2>
+<p>Every Markdown file is a page with:</p>
+<ul>
+<li><strong>Frontmatter properties</strong> as fields (<code>status</code>, <code>due</code>, …). Names are also available sanitized: <code>Sleep Hours</code> → <code>sleep-hours</code>; <code>snake_case</code> stays as is.</li>
+<li><strong>Inline fields</strong> <code>key:: value</code> (own line), <code>[key:: value]</code> (inline, visible key) or <code>(key:: value)</code> (inline, hidden key). Inline fields inside list items/tasks attach to that item.</li>
+<li><strong>Implicit fields</strong> under <code>file</code>: <code>file.name</code>, <code>file.folder</code>, <code>file.path</code>, <code>file.ext</code>, <code>file.link</code>, <code>file.size</code>, <code>file.ctime</code>, <code>file.cday</code>, <code>file.mtime</code>, <code>file.mday</code>, <code>file.tags</code> (with nesting expanded), <code>file.etags</code> (exact tags), <code>file.inlinks</code>, <code>file.outlinks</code>, <code>file.aliases</code>, <code>file.tasks</code>, <code>file.lists</code>, <code>file.frontmatter</code>, <code>file.day</code> (a date parsed from the filename like <code>2026-09-06</code>), <code>file.starred</code>.</li>
+<li><strong>Types</strong>: text, number, boolean, date (<code>2026-09-06</code> or <code>2026-09-06T14:30</code>), duration (<code>3 days</code>, <code>2h 30m</code>), link, list, object. Types are inferred; property types set in Obsidian are respected for dates.</li>
+</ul>
+<h2 id="dql-the-query-language">DQL — the query language<a class="headerlink" href="#dql-the-query-language" title="Permanent link">&para;</a></h2>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sb">```dataview</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">TABLE [WITHOUT ID] col1 [AS &quot;Name&quot;], col2, ...</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">FROM source</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">WHERE condition</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">SORT field [ASC|DESC], field2 ...</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">GROUP BY field [AS &quot;name&quot;]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">FLATTEN field [AS name]</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">LIMIT n</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sb">```</span>
+</span></code></pre></div>
+<h3 id="query-types">Query types<a class="headerlink" href="#query-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Renders</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LIST</code> / <code>LIST expr</code></td>
+<td>Bulleted list of page links, optionally with one expression after each</td>
+</tr>
+<tr>
+<td><code>TABLE cols</code></td>
+<td>Table with a first column of page links (suppress with <code>WITHOUT ID</code>)</td>
+</tr>
+<tr>
+<td><code>TASK</code></td>
+<td>Interactive task list (check boxes update source files); <code>GROUP BY file.link</code> groups per note</td>
+</tr>
+<tr>
+<td><code>CALENDAR date_field</code></td>
+<td>Month calendar with dots per page on the date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="from-sources"><code>FROM</code> sources<a class="headerlink" href="#from-sources" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FROM &quot;Projects&quot;                      folder (and subfolders)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>FROM &quot;Projects/Active&quot;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>FROM #project                        tag (nested included)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>FROM [[Alpha]]                       pages linking TO Alpha (inlinks)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>FROM outgoing([[Alpha]])             pages Alpha links to
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>FROM &quot;Projects&quot; OR #project
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>FROM #a AND -#b                      exclude
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>FROM -&quot;Templates&quot;                    everything except a folder
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>FROM csv(&quot;Files/data.csv&quot;)           a CSV file as rows
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>(omit FROM)                          entire vault
+</span></code></pre></div>
+<h3 id="where-and-expressions"><code>WHERE</code> and expressions<a class="headerlink" href="#where-and-expressions" title="Permanent link">&para;</a></h3>
+<p>Operators: <code>= != &gt; &lt; &gt;= &lt;=</code>, <code>AND OR !</code>, <code>+ - * / %</code>, <code>contains(list_or_string, x)</code>, <code>!contains(...)</code>. Field access <code>a.b</code>, <code>a[0]</code>, <code>a["key with space"]</code>. Dates and durations: <code>date(today)</code>, <code>date(now)</code>, <code>date(tomorrow)</code>, <code>date(yesterday)</code>, <code>date(sow)</code> / <code>date(eow)</code> (start/end of week), <code>date(som)</code>/<code>date(eom)</code>, <code>date(soy)</code>/<code>date(eoy)</code>, <code>dur(7 days)</code>, <code>date(today) - dur(1 week)</code>, <code>due - date(today)</code> gives a duration; <code>(due - date(today)).days</code>.</p>
+<h3 id="functions-the-ones-you-will-actually-use">Functions (the ones you will actually use)<a class="headerlink" href="#functions-the-ones-you-will-actually-use" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constructors</td>
+<td><code>date(x)</code>, <code>dur(x)</code>, <code>number(x)</code>, <code>string(x)</code>, <code>link(path, display?)</code>, <code>elink(url, display?)</code>, <code>list(...)</code>, <code>object(k, v, …)</code>, <code>typeof(x)</code>, <code>embed(link)</code></td>
+</tr>
+<tr>
+<td>Numeric</td>
+<td><code>round(n, digits?)</code>, <code>trunc</code>, <code>floor</code>, <code>ceil</code>, <code>min</code>, <code>max</code>, <code>sum(list)</code>, <code>average(list)</code>, <code>minby(list, fn)</code>, <code>maxby(list, fn)</code>, <code>product</code>, <code>reduce(list, op)</code></td>
+</tr>
+<tr>
+<td>Object/list</td>
+<td><code>contains</code>, <code>icontains</code>, <code>econtains</code> (exact), <code>containsword</code>, <code>extract(obj, keys…)</code>, <code>sort(list)</code>, <code>reverse</code>, <code>length</code>, <code>nonnull</code>, <code>all</code>, <code>any</code>, <code>none</code>, <code>join(list, sep)</code>, <code>filter(list, (x) =&gt; …)</code>, <code>map(list, (x) =&gt; …)</code>, <code>flat(list, depth?)</code>, <code>slice(list, a, b)</code>, <code>unique(list)</code>, <code>first(list)</code>, <code>last(list)</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td><code>regextest(pattern, s)</code>, <code>regexmatch</code>, <code>regexreplace(s, pattern, repl)</code>, <code>replace</code>, <code>lower</code>, <code>upper</code>, <code>split(s, sep)</code>, <code>startswith</code>, <code>endswith</code>, <code>padleft</code>, <code>padright</code>, <code>substring</code>, <code>truncate(s, n, suffix?)</code></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><code>dateformat(date, "yyyy-MM-dd")</code> (Luxon), <code>durationformat(dur, "h'h' m'm'")</code>, <code>striptime(date)</code>, <code>date.year/.month/.day/.weekday/.week/.hour</code>, <code>localtime</code></td>
+</tr>
+<tr>
+<td>Utility</td>
+<td><code>default(x, fallback)</code>, <code>choice(cond, a, b)</code>, <code>hash(seed, …)</code>, <code>striptime</code>, <code>meta(link)</code> (link metadata: <code>.display</code>, <code>.embed</code>, <code>.path</code>, <code>.subpath</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group-by-and-rows"><code>GROUP BY</code> and <code>rows</code><a class="headerlink" href="#group-by-and-rows" title="Permanent link">&para;</a></h3>
+<p>After <code>GROUP BY</code>, each result is a group with <code>key</code> and <code>rows</code> (the pages). <code>TABLE rows.file.link, length(rows) GROUP BY status</code> shows each status with its notes. <code>FLATTEN</code> does the reverse — explodes a list field into one row per element (<code>FLATTEN attendees AS person</code>), which is how you count "meetings per person".</p>
+<h3 id="inline-queries">Inline queries<a class="headerlink" href="#inline-queries" title="Permanent link">&para;</a></h3>
+<p><code>`= this.due - date(today)`</code> renders inside a sentence. <code>`= length(filter(this.file.tasks, (t) =&gt; !t.completed))`</code> gives a live count. <code>this</code> is the current page. Inline DataviewJS: <code>`$= dv.current().file.mtime`</code>.</p>
+<h2 id="dataviewjs">DataviewJS<a class="headerlink" href="#dataviewjs" title="Permanent link">&para;</a></h2>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="sb">```dataviewjs</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">const pages = dv.pages(&#39;&quot;Projects&quot;&#39;).where(p =&gt; p.status === &quot;active&quot;);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s">dv.table([&quot;Project&quot;, &quot;Due&quot;, &quot;Days left&quot;], pages.map(p =&gt; [p.file.link, p.due, p.due ? Math.round(p.due.diff(dv.date(&quot;today&quot;), &quot;days&quot;).days) : &quot;&quot;]));</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="sb">```</span>
+</span></code></pre></div>
+<p>The <code>dv</code> API:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dv.pages(source)</code></td>
+<td>Data array of pages (<code>'"Folder"'</code>, <code>'#tag'</code>, <code>'[[Note]]'</code>, combinations)</td>
+</tr>
+<tr>
+<td><code>dv.page(path)</code> / <code>dv.current()</code></td>
+<td>One page</td>
+</tr>
+<tr>
+<td><code>dv.pagePaths(source)</code></td>
+<td>Paths only</td>
+</tr>
+<tr>
+<td><code>dv.list(arr)</code>, <code>dv.table(headers, rows)</code>, <code>dv.taskList(tasks, groupByFile?)</code></td>
+<td>Render</td>
+</tr>
+<tr>
+<td><code>dv.header(level, text)</code>, <code>dv.paragraph(text)</code>, <code>dv.span(text)</code>, <code>dv.el(tag, text, attrs)</code></td>
+<td>Render arbitrary content (Markdown rendered)</td>
+</tr>
+<tr>
+<td><code>dv.date(x)</code>, <code>dv.duration(x)</code>, <code>dv.fileLink(path, embed?, display?)</code>, <code>dv.sectionLink</code>, <code>dv.blockLink</code></td>
+<td>Constructors</td>
+</tr>
+<tr>
+<td><code>dv.array(...)</code></td>
+<td>Wrap a JS array as a Data array (<code>.where</code>, <code>.sort</code>, <code>.groupBy</code>, <code>.map</code>, <code>.flatMap</code>, <code>.limit</code>, <code>.distinct</code>, <code>.sum</code>, <code>.length</code>)</td>
+</tr>
+<tr>
+<td><code>dv.compare</code>, <code>dv.equal</code></td>
+<td>Comparisons that understand Dataview types</td>
+</tr>
+<tr>
+<td><code>dv.io.csv(path)</code>, <code>dv.io.load(path)</code></td>
+<td>Read CSV / file text</td>
+</tr>
+<tr>
+<td><code>dv.view("Scripts/views/name", input)</code></td>
+<td>Run a <code>.js</code>/<code>.css</code> view script from a folder (reusable widgets)</td>
+</tr>
+<tr>
+<td><code>dv.execute(dql)</code>, <code>dv.executeJs(js)</code>, <code>dv.query(dql)</code>, <code>dv.tryQuery</code></td>
+<td>Run DQL from JS (returns structured results)</td>
+</tr>
+<tr>
+<td><code>app</code>, <code>dv.app</code></td>
+<td>Full Obsidian API — read and <em>write</em> files</td>
+</tr>
+</tbody>
+</table>
+<p>Dates are <strong>Luxon</strong> DateTime objects (<code>.diff()</code>, <code>.plus({days: 7})</code>, <code>.toFormat("yyyy-MM-dd")</code>, <code>.startOf("week")</code>), durations are Luxon Durations.</p>
+<h3 id="reusable-views">Reusable views<a class="headerlink" href="#reusable-views" title="Permanent link">&para;</a></h3>
+<p><code>Scripts/views/progress/view.js</code>:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// input: {source: &#39;&quot;Projects&quot;&#39;, field: &quot;status&quot;, done: &quot;done&quot;}</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dv</span><span class="p">.</span><span class="nx">pages</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">source</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pages</span><span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">p</span><span class="p">[</span><span class="nx">input</span><span class="p">.</span><span class="nx">field</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">done</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">pct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pages</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">done</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">pages</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nx">dv</span><span class="p">.</span><span class="nx">paragraph</span><span class="p">(</span><span class="sb">`**</span><span class="si">${</span><span class="nx">done</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">pages</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">** (</span><span class="si">${</span><span class="nx">pct</span><span class="si">}</span><span class="sb">%)  \n\`</span><span class="si">${</span><span class="s2">&quot;█&quot;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="nx">pct</span><span class="o">/</span><span class="mf">5</span><span class="p">)</span><span class="si">}${</span><span class="s2">&quot;░&quot;</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">20</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">pct</span><span class="o">/</span><span class="mf">5</span><span class="p">)</span><span class="si">}</span><span class="sb">\``</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Use anywhere: <code>```dataviewjs dv.view("Scripts/views/progress", {source: '"Projects"', field: "status", done: "done"}) ```</code>.</p>
+<h2 id="query-library-for-a-whole-life-vault">Query library for a whole-life vault<a class="headerlink" href="#query-library-for-a-whole-life-vault" title="Permanent link">&para;</a></h2>
+<p>Assumes the Chapter 5 schema. Each fits in a <code>dataview</code> block unless marked <code>dataviewjs</code>.</p>
+<h3 id="daily-note-widgets">Daily note widgets<a class="headerlink" href="#daily-note-widgets" title="Permanent link">&para;</a></h3>
+<p>Notes created or modified on this day (put in <code>tpl-daily</code>; uses <code>this.file.day</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>TABLE WITHOUT ID file.link AS &quot;Note&quot;, type
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>FROM -&quot;Journal&quot; AND -&quot;Templates&quot;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>WHERE file.cday = this.file.day OR file.mday = this.file.day
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>SORT file.mtime DESC
+</span></code></pre></div>
+<p>Tasks due today or overdue:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>TASK
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>FROM -&quot;Templates&quot;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>WHERE !completed AND due AND due &lt;= this.file.day
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>SORT due ASC
+</span></code></pre></div>
+<p>"On this day" in previous years:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>LIST
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>FROM &quot;Journal/Daily&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>WHERE file.day.month = this.file.day.month AND file.day.day = this.file.day.day AND file.day.year != this.file.day.year
+</span></code></pre></div>
+<p>Interstitial log with inline mood: given lines like <code>- 14:30 finished draft [mood:: 7] [energy:: 6]</code> in daily notes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>TABLE WITHOUT ID file.link AS Day, round(average(rows.L.mood),1) AS Mood, round(average(rows.L.energy),1) AS Energy
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>FROM &quot;Journal/Daily&quot;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>FLATTEN file.lists AS L
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>WHERE L.mood
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>GROUP BY file.link
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>SORT file.link DESC
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>LIMIT 30
+</span></code></pre></div>
+<h3 id="weekly-review">Weekly review<a class="headerlink" href="#weekly-review" title="Permanent link">&para;</a></h3>
+<p>Completed tasks this week (uses <code>[completion:: date]</code> stamped by Dataview or Tasks' <code>✅ 2026-09-06</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>TASK
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>WHERE completed AND completion &gt;= date(sow) AND completion &lt;= date(eow)
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>GROUP BY file.link
+</span></code></pre></div>
+<p>Projects without a next action:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>TABLE WITHOUT ID file.link AS Project, status
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>FROM &quot;Projects&quot;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>WHERE status = &quot;active&quot; AND length(filter(file.tasks, (t) =&gt; !t.completed)) = 0
+</span></code></pre></div>
+<p>Stale active projects (no edit in 14 days):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>TABLE file.mtime AS &quot;Last touched&quot;, (date(today) - file.mday).days AS &quot;Days&quot;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>FROM &quot;Projects&quot;
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>WHERE status = &quot;active&quot; AND file.mday &lt; date(today) - dur(14 days)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>SORT file.mday ASC
+</span></code></pre></div>
+<p>Waiting-for items across the vault (tasks containing <code>#waiting</code> or the <code>👤</code> convention):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>TASK
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>WHERE !completed AND (contains(tags, &quot;#waiting&quot;) OR contains(text, &quot;👤&quot;))
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>GROUP BY file.link
+</span></code></pre></div>
+<h3 id="projects-goals">Projects &amp; goals<a class="headerlink" href="#projects-goals" title="Permanent link">&para;</a></h3>
+<p>Project portfolio with task progress:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>TABLE WITHOUT ID file.link AS Project, area, due,
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  length(filter(file.tasks, (t) =&gt; t.completed)) + &quot;/&quot; + length(file.tasks) AS Tasks,
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  choice(due AND due &lt; date(today), &quot;🔴&quot;, &quot;🟢&quot;) AS &quot;&quot;
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>FROM &quot;Projects&quot;
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>WHERE status = &quot;active&quot;
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>SORT priority ASC, due ASC
+</span></code></pre></div>
+<p>Goals with linked project counts:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>TABLE WITHOUT ID file.link AS Goal, horizon, status, length(filter(file.inlinks, (l) =&gt; meta(l).path AND contains(string(l), &quot;Projects&quot;))) AS Projects
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>FROM &quot;Goals&quot;
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>WHERE status != &quot;done&quot;
+</span></code></pre></div>
+<p>(Bases handles most of these more cleanly; keep Dataview where task counting is needed.)</p>
+<h3 id="people">People<a class="headerlink" href="#people" title="Permanent link">&para;</a></h3>
+<p>Last mention of each person in daily notes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>TABLE WITHOUT ID file.link AS Person, max(filter(file.inlinks, (l) =&gt; contains(string(l), &quot;Journal/Daily&quot;))) AS &quot;Last daily mention&quot;
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>FROM &quot;People&quot;
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>SORT file.name ASC
+</span></code></pre></div>
+<p>Meetings per person (FLATTEN):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>TABLE WITHOUT ID person AS Person, length(rows) AS Meetings, max(rows.date) AS Last
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>FROM &quot;Work/Meetings&quot;
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>FLATTEN attendees AS person
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>GROUP BY person
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>SORT length(rows) DESC
+</span></code></pre></div>
+<p>Upcoming birthdays (next 30 days, year-agnostic):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>const today = dv.date(&quot;today&quot;);
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>const rows = dv.pages(&#39;&quot;People&quot;&#39;).where(p =&gt; p.birthday).map(p =&gt; {
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  let next = p.birthday.set({year: today.year});
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  if (next &lt; today) next = next.plus({years: 1});
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  return {p, next, days: Math.ceil(next.diff(today, &quot;days&quot;).days), age: next.year - p.birthday.year};
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>}).where(r =&gt; r.days &lt;= 30).sort(r =&gt; r.days);
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>dv.table([&quot;Person&quot;, &quot;Birthday&quot;, &quot;In&quot;, &quot;Turns&quot;], rows.map(r =&gt; [r.p.file.link, r.next.toFormat(&quot;d MMM&quot;), r.days + &quot; d&quot;, r.age]));
+</span></code></pre></div>
+<h3 id="reading-learning">Reading &amp; learning<a class="headerlink" href="#reading-learning" title="Permanent link">&para;</a></h3>
+<p>Reading stats by year:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>TABLE WITHOUT ID finished.year AS Year, length(rows) AS Books, round(average(rows.rating), 2) AS &quot;Avg rating&quot;, sum(rows.pages) AS Pages
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>FROM &quot;Sources/Books&quot;
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>WHERE status = &quot;read&quot; AND finished
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>GROUP BY finished.year
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>SORT finished.year DESC
+</span></code></pre></div>
+<p>Highlights tagged for review (lines with <code>#review</code> inside source notes):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>TABLE WITHOUT ID L.text AS Highlight, file.link AS Source
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>FROM &quot;Sources&quot;
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>FLATTEN file.lists AS L
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>WHERE contains(L.tags, &quot;#review&quot;)
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>LIMIT 50
+</span></code></pre></div>
+<p>Ideas without sources / sources without ideas:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>LIST FROM &quot;Notes&quot; WHERE !sources OR length(sources) = 0
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>LIST FROM &quot;Sources&quot; WHERE status = &quot;read&quot; AND length(filter(file.inlinks, (l) =&gt; contains(string(l), &quot;Notes/&quot;))) = 0
+</span></code></pre></div>
+<h3 id="health-habits">Health &amp; habits<a class="headerlink" href="#health-habits" title="Permanent link">&para;</a></h3>
+<p>Habit streaks from daily-note checkboxes (tasks in a <code>## Habits</code> section like <code>- [x] Meditate #habit/meditate</code>):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>const habit = &quot;#habit/meditate&quot;;
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>const days = dv.pages(&#39;&quot;Journal/Daily&quot;&#39;).sort(p =&gt; p.file.day, &quot;desc&quot;);
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>let streak = 0;
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>for (const d of days) {
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  const t = d.file.tasks.find(t =&gt; t.tags.includes(habit));
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>  if (t &amp;&amp; t.completed) streak++; else break;
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>}
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>dv.paragraph(`**${habit}** current streak: **${streak}** days`);
+</span></code></pre></div>
+<p>Workout volume by week:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>TABLE WITHOUT ID dateformat(date, &quot;kkkk-&#39;W&#39;WW&quot;) AS Week, length(rows) AS Sessions, sum(rows.duration_min) AS Minutes, round(sum(rows.distance_km),1) AS km
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>FROM &quot;Health/Workouts&quot;
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>GROUP BY dateformat(date, &quot;kkkk-&#39;W&#39;WW&quot;)
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>SORT dateformat(date, &quot;kkkk-&#39;W&#39;WW&quot;) DESC
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>LIMIT 12
+</span></code></pre></div>
+<p>Sleep vs mood correlation (quick and dirty):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>const ps = dv.pages(&#39;&quot;Journal/Daily&quot;&#39;).where(p =&gt; p.sleep_h &amp;&amp; p.mood);
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>const n = ps.length; if (n &lt; 5) { dv.paragraph(&quot;Not enough data&quot;); return; }
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>const mx = ps.map(p=&gt;p.sleep_h).array().reduce((a,b)=&gt;a+b)/n, my = ps.map(p=&gt;p.mood).array().reduce((a,b)=&gt;a+b)/n;
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>let num=0, dx=0, dy=0;
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>for (const p of ps) { num += (p.sleep_h-mx)*(p.mood-my); dx += (p.sleep_h-mx)**2; dy += (p.mood-my)**2; }
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>dv.paragraph(`Sleep↔mood correlation over ${n} days: **r = ${(num/Math.sqrt(dx*dy)).toFixed(2)}**`);
+</span></code></pre></div>
+<h3 id="finance">Finance<a class="headerlink" href="#finance" title="Permanent link">&para;</a></h3>
+<p>Monthly spend from a transactions ledger note where each line is <code>- 2026-09-03 Groceries [amount:: 54.20] [cat:: food]</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>TABLE WITHOUT ID cat AS Category, round(sum(rows.L.amount), 2) AS Total, length(rows) AS Items
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>FROM &quot;Finance/Ledger&quot;
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>FLATTEN file.lists AS L
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>FLATTEN L.cat AS cat
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>WHERE L.amount AND dateformat(date(regexreplace(L.text, &quot;^(\d{4}-\d{2}-\d{2}).*&quot;, &quot;$1&quot;)), &quot;yyyy-MM&quot;) = dateformat(date(today), &quot;yyyy-MM&quot;)
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>GROUP BY cat
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>SORT sum(rows.L.amount) DESC
+</span></code></pre></div>
+<p>Subscriptions total (Bases does this better, but for completeness):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>TABLE WITHOUT ID file.link AS Service, cost, billing, round(choice(billing = &quot;yearly&quot;, cost/12, cost), 2) AS Monthly
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>FROM &quot;Finance/Subscriptions&quot;
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>WHERE status = &quot;active&quot;
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>SORT choice(billing = &quot;yearly&quot;, cost/12, cost) DESC
+</span></code></pre></div>
+<p>Inline total for a sentence (inline DQL cannot query other pages, so use inline JS): <code>`$= Math.round(dv.pages('"Finance/Subscriptions"').where(p=&gt;p.status==="active").map(p=&gt;p.billing==="yearly"?p.cost/12:p.cost).array().reduce((a,b)=&gt;a+b,0)*100)/100`</code>.</p>
+<h3 id="knowledge-maintenance">Knowledge maintenance<a class="headerlink" href="#knowledge-maintenance" title="Permanent link">&para;</a></h3>
+<p>Orphans and dead ends:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>TABLE WITHOUT ID file.link, length(file.inlinks) AS In, length(file.outlinks) AS Out
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>FROM -&quot;Templates&quot; AND -&quot;Journal&quot; AND -&quot;Attachments&quot;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>WHERE length(file.inlinks) = 0 AND length(file.outlinks) = 0
+</span></code></pre></div>
+<p>Most linked notes (hub candidates without MOCs):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>TABLE WITHOUT ID file.link AS Note, length(file.inlinks) AS Inlinks
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>FROM -&quot;Maps&quot;
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>WHERE type != &quot;moc&quot; AND length(file.inlinks) &gt; 15
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>SORT length(file.inlinks) DESC
+</span></code></pre></div>
+<p>Notes touched in the last 7 days, by type:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>TABLE WITHOUT ID type AS Type, rows.file.link AS Notes
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>FROM -&quot;Journal&quot; AND -&quot;Templates&quot;
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>WHERE file.mday &gt;= date(today) - dur(7 days)
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>GROUP BY type
+</span></code></pre></div>
+<p>Unresolved-link frequency (DataviewJS via metadataCache):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>const unres = app.metadataCache.unresolvedLinks;
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>const counts = {};
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>for (const src in unres) for (const t in unres[src]) counts[t] = (counts[t] || 0) + unres[src][t];
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>const rows = Object.entries(counts).sort((a,b)=&gt;b[1]-a[1]).slice(0, 25);
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>dv.table([&quot;Missing note&quot;, &quot;Referenced&quot;], rows.map(([t,c]) =&gt; [t, c]));
+</span></code></pre></div>
+<h3 id="moc-helpers">MOC helpers<a class="headerlink" href="#moc-helpers" title="Permanent link">&para;</a></h3>
+<p>Unsorted notes that link to this MOC's topic but are not listed in it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>LIST
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>FROM [[]] AND -&quot;Maps&quot;
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>WHERE !contains(this.file.outlinks, file.link)
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>SORT file.ctime DESC
+</span></code></pre></div>
+<p>Random note from this MOC's neighbourhood for review:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>const ps = dv.pages(&quot;[[]]&quot;).where(p =&gt; p.type === &quot;note&quot;).array();
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>if (ps.length) { const p = ps[Math.floor(Math.random()*ps.length)]; dv.paragraph(`🎲 ${p.file.link}`); }
+</span></code></pre></div>
+<h2 id="charts">Charts<a class="headerlink" href="#charts" title="Permanent link">&para;</a></h2>
+<p>Dataview does not chart, but two plugins render charts from Dataview output:</p>
+<ul>
+<li><strong>Obsidian Charts</strong> — a <code>chart</code> code block (Chart.js). DataviewJS can build one: <code>dv.paragraph("```chart\ntype: bar\nlabels: [" + labels + "]\nseries:\n  - title: km\n    data: [" + data + "]\n```")</code> — or use <code>window.renderChart(config, container)</code>.</li>
+<li><strong>Tracker</strong> — habit/metric charts over daily notes with its own query language (line, bar, heatmap, summary).</li>
+<li><strong>Heatmap Calendar</strong> — GitHub-style yearly heatmaps from a DataviewJS array (mood, workouts, words written).</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>// Heatmap Calendar of workout minutes
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>const entries = dv.pages(&#39;&quot;Health/Workouts&quot;&#39;).where(p =&gt; p.date &amp;&amp; p.duration_min).map(p =&gt; ({date: p.date.toFormat(&quot;yyyy-MM-dd&quot;), intensity: p.duration_min, content: &quot;&quot;})).array();
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>renderHeatmapCalendar(this.container, {year: dv.date(&quot;today&quot;).year, colors: {c: [&quot;#ede9fe&quot;,&quot;#c4b5fd&quot;,&quot;#8b5cf6&quot;,&quot;#6d28d9&quot;]}, entries});
+</span></code></pre></div>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dataview indexes the whole vault at startup; on mobile with 10k+ notes this can take seconds. There is no per-folder exclusion (Obsidian's <em>Excluded files</em> does not affect Dataview), so keep the vault lean instead.</li>
+<li><code>FROM</code> a folder or tag before <code>WHERE</code> — it narrows before evaluating expressions.</li>
+<li>Avoid <code>file.inlinks</code>/<code>file.outlinks</code> computations over the whole vault in notes you open often.</li>
+<li>DataviewJS that loops over all pages and reads files (<code>app.vault.read</code>) is slow; read metadata (<code>file.tasks</code>, <code>file.lists</code>) instead — it is already indexed.</li>
+<li>Every open note with queries re-renders on the refresh interval; dashboards with 20 queries are fine on desktop, sluggish on phones. Move heavy dashboards to Bases.</li>
+</ul>
+<h2 id="common-errors">Common errors<a class="headerlink" href="#common-errors" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"No results" but notes exist</td>
+<td><code>FROM "Folder"</code> case/path mismatch; property is a string but compared to a number; date property stored as text (<code>due: "2026-09-01"</code> in quotes is still parsed; <code>due: 1 Sept</code> is not)</td>
+</tr>
+<tr>
+<td>Field shows as <code>-</code></td>
+<td>Field missing on that page; use <code>default(field, "")</code></td>
+</tr>
+<tr>
+<td><code>contains()</code> on a link field fails</td>
+<td>Compare links properly: <code>contains(attendees, [[Jane Doe]])</code>, or <code>contains(string(attendees), "Jane")</code></td>
+</tr>
+<tr>
+<td>Dates off by hours</td>
+<td>Property has time/timezone; use <code>striptime()</code></td>
+</tr>
+<tr>
+<td>Query renders in Live Preview but not in Reading view (or vice versa)</td>
+<td>Usually a nested code fence issue — use four backticks around examples</td>
+</tr>
+<tr>
+<td><code>TASK</code> query shows tasks twice</td>
+<td>Nested tasks with <em>Recursive sub-task completion</em>; add <code>WHERE !parent</code> or flatten intentionally</td>
+</tr>
+<tr>
+<td>Slow vault open</td>
+<td>Too many pages with heavy DataviewJS; disable the plugin to confirm</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dataview-bases-coexistence">Dataview ↔ Bases coexistence<a class="headerlink" href="#dataview-bases-coexistence" title="Permanent link">&para;</a></h2>
+<p>Use Dataview for: <code>TASK</code> queries with logic, inline fields (<code>[mood:: 7]</code>), FLATTEN-based stats, joins, charts, anything JavaScript. Use Bases for: every list of notes filtered by properties, anything you edit, anything on mobile. When you write a new Dataview <code>TABLE</code>, ask whether a Base would do; usually yes.</p>
+<h2 id="key-takeaways">Key takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dataview reads properties, inline fields, tasks, and list items — the last three are what Bases cannot see, and where Dataview remains irreplaceable.</li>
+<li>DQL: <code>TABLE/LIST/TASK/CALENDAR</code> + <code>FROM/WHERE/SORT/GROUP BY/FLATTEN/LIMIT</code>; learn <code>contains</code>, <code>filter</code>, <code>map</code>, <code>length</code>, <code>sum</code>, <code>dateformat</code>, <code>default</code>, <code>choice</code>, and date/duration arithmetic.</li>
+<li>DataviewJS with <code>dv.pages/.where/.map/.table</code> and Luxon dates handles everything else; <code>dv.view</code> makes widgets reusable; <code>app</code> gives write access.</li>
+<li>Keep a library of the queries above in <code>Meta/Query Library.md</code> and copy from it.</li>
+<li>Use charts plugins for visuals, keep heavy dashboards on desktop, and migrate plain tables to Bases.</li>
+</ul>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p><a href="../13-tasks-and-time/">Chapter 13: Tasks, Time and Planning →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../11-templates-and-templater/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Templates and Templater">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Templates and Templater
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../13-tasks-and-time/" class="md-footer__link md-footer__link--next" aria-label="Next: Tasks, Time and Planning">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Tasks, Time and Planning
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Written 2026. Content may be freely shared with attribution.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/gorg667/obsidian-guide" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
